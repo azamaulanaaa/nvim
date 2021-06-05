@@ -5,8 +5,8 @@ function! I(relativePath)
 	exec 'source '.fullpath
 endfunction
 
-" Import user configuration
-call I('user.vim')
-
 " Import vim-plug config
 call I('plug.vim')
+
+" Import user configuration
+call I('user.vim')
