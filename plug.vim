@@ -11,4 +11,7 @@ call plug#begin('./plugins')
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
+" Custom Statusbar
+Plug 'vim-airline/vim-airline'
+
 call plug#end()
