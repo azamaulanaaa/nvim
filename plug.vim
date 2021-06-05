@@ -5,6 +5,7 @@ if empty(glob(data_dir.'/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Load plugins
 call plug#begin('./plugins')
 
 " Git Gutter
