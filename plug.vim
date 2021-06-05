@@ -14,4 +14,10 @@ Plug 'airblade/vim-gitgutter'
 " Custom Statusbar
 Plug 'vim-airline/vim-airline'
 
+" Theme for airline
+Plug 'vim-airline/vim-airline-themes'
+
+" Onehalf theme
+Plug 'sonph/onehalf', {'rtp':'vim'}
+
 call plug#end()

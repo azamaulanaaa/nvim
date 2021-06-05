@@ -35,3 +35,8 @@ set mouse=a
 
 " Disable beep
 set belloff=all
+
+" Load theme
+set cursorline
+set t_Co=256
+colorscheme onehalfdark
