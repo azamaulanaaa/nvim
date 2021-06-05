@@ -1,4 +1,4 @@
-"Import user configuration
+" Import user configuration
 source user.vim
 
 " Import vim-plug config
