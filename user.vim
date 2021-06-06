@@ -40,3 +40,6 @@ set belloff=all
 set cursorline
 set t_Co=256
 colorscheme onehalfdark
+
+" Make it responseive
+set updatetime=300
