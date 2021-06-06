@@ -1,2 +1,2 @@
 " Open fern with <C-o>
-noremap <C-o> :Fern . -reveal=% -drawer -toggle<CR>
+noremap <silent><C-o> :Fern . -reveal=% -drawer -toggle<CR>
