@@ -23,4 +23,7 @@ Plug 'sonph/onehalf', {'rtp':'vim'}
 " File tree explorer
 Plug 'lambdalisue/fern.vim'
 
+" Fix performance issue
+Plug 'antoinemadec/FixCursorHold.nvim'
+
 call plug#end()
