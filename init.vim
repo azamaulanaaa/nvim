@@ -5,7 +5,6 @@ runtime plug.vim
 runtime user.vim
 
 " Import plugins configuration
-let plugins = '/plugins-config'
 
 " Import coc config
-runtime plugins.'coc.vim'
+runtime plugins-config/coc.vim
