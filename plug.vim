@@ -20,11 +20,17 @@ Plug 'vim-airline/vim-airline-themes'
 " Onehalf theme
 Plug 'sonph/onehalf', {'rtp':'vim'}
 
+" Nerdfont
+Plug 'lambdalisue/nerdfont.vim'
+
 " File tree explorer
 Plug 'lambdalisue/fern.vim'
 
 " git status plugins for fern
 Plug 'lambdalisue/fern-git-status.vim'
+
+" Nerdfont for ferm
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
