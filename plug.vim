@@ -23,6 +23,9 @@ Plug 'sonph/onehalf', {'rtp':'vim'}
 " File tree explorer
 Plug 'lambdalisue/fern.vim'
 
+" git status plugins for fern
+Plug 'lambdalisue/fern-git-status.vim'
+
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
 
