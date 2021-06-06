@@ -8,3 +8,6 @@ runtime user.vim
 
 " Import coc config
 runtime plugins-config/coc.vim
+
+" Import fern config
+runtime plugins-config/fern.vim
