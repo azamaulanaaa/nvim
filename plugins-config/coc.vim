@@ -17,10 +17,10 @@ function! s:check_back_space() abort
 endfunction
 
 " Use K to show documentation in preview mode
-nnoremap <silent> K :call <SID>show_documentatation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(["nvim","help"], &filetype) >= 0)
+  if (index(["vim","help"], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
