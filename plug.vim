@@ -26,4 +26,7 @@ Plug 'lambdalisue/fern.vim'
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
 
+" Language server
+Plug 'neoclide/coc.nvim', {'barnch': 'release'}
+
 call plug#end()
