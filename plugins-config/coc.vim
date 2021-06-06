@@ -6,7 +6,7 @@ set shortmess+=c
 
 " Use tab to trigger completion with character ahead and navigate
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C->" :
+      \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\TAB" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p" : "\C-h>"
