@@ -6,7 +6,7 @@ if empty(glob(data_dir.'/autoload/plug.vim'))
 endif
 
 " Load plugins
-call plug#begin('./plugins')
+call plug#begin(stdpath('config').'/plugins')
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
