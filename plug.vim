@@ -20,4 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Onehalf theme
 Plug 'sonph/onehalf', {'rtp':'vim'}
 
+" File tree explorer
+Plug 'lambdalisue/fern.vim'
+
 call plug#end()
