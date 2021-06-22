@@ -32,6 +32,9 @@ Plug 'lambdalisue/fern-git-status.vim'
 " Nerdfont for ferm
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
+" Git stage for fern
+Plug 'lambdalisue/fern-mapping-git.vim'
+
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
 
