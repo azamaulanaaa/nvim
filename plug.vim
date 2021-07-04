@@ -41,4 +41,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " Language server
 Plug 'neoclide/coc.nvim', {'barnch': 'release'}
 
+" Syntax Highlighting
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
