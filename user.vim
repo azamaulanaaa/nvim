@@ -43,3 +43,6 @@ colorscheme dogrun
 
 " Make it responseive
 set updatetime=300
+
+" Always show tabline
+set showtabline=2
