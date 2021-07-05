@@ -1,5 +1,5 @@
 " set theme for airlne
-let g:airline_theme='onehalfdark'
+let g:airline_theme='onedark'
 
 " enable tabline
 let g:airline#extensions#tabline#enabled=0
