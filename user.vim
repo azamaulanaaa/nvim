@@ -21,7 +21,7 @@ set wildignore+=**/node_modules/**
 nnoremap <leader>f :find 
 
 " Show number line
-set number
+set relativenumber
 
 " Type experience
 set tabstop=2
