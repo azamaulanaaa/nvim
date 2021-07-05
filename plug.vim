@@ -11,12 +11,6 @@ call plug#begin(stdpath('config').'/plugins')
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
-" Custom Statusbar
-Plug 'vim-airline/vim-airline'
-
-" Theme for airline
-Plug 'vim-airline/vim-airline-themes'
-
 " Onehalf theme
 Plug 'sonph/onehalf', {'rtp':'vim'}
 
@@ -43,5 +37,11 @@ Plug 'neoclide/coc.nvim', {'barnch': 'release'}
 
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
+
+" Dogrun theme
+Plug 'wadackel/vim-dogrun'
+
+" Lightline
+Plug 'itchyny/lightline.vim'
 
 call plug#end()

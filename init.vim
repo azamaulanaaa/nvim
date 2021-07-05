@@ -12,5 +12,5 @@ runtime plugins-config/coc.vim
 " Import fern config
 runtime plugins-config/fern.vim
 
-" Import airline config
-runtime plugins-config/airline.vim
+" Import lightline config
+runtime plugins-config/lightline.vim

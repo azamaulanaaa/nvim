@@ -39,7 +39,7 @@ set belloff=all
 " Load theme
 set cursorline
 set t_Co=256
-colorscheme onehalfdark
+colorscheme dogrun
 
 " Make it responseive
 set updatetime=300
