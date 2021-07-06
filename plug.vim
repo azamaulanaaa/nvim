@@ -11,9 +11,6 @@ call plug#begin(stdpath('config').'/plugins')
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
-" Onehalf theme
-Plug 'sonph/onehalf', {'rtp':'vim'}
-
 " Nerdfont
 Plug 'lambdalisue/nerdfont.vim'
 
