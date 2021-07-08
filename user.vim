@@ -49,8 +49,8 @@ set showtabline=2
 
 
 " Auto normal mode in terminal
-tnoremap <CR> <CR><c-\><c-n><CR>
-tnoremap <c-c> <c-c><c-\><c-n><CR>
+tnoremap <CR> <CR><c-\><c-n>
+tnoremap <c-c> <c-c><c-\><c-n>
 
 " Clear search hightlight
 nnoremap <silent> <CR> :noh<CR>
