@@ -51,3 +51,6 @@ set showtabline=2
 " Auto normal mode in terminal
 tnoremap <CR> <CR><c-\><c-n><CR>
 tnoremap <c-c> <c-c><c-\><c-n><CR>
+
+" Clear search hightlight
+nnoremap <silent> <CR> :noh<CR>
