@@ -47,10 +47,5 @@ set updatetime=300
 " Always show tabline
 set showtabline=2
 
-
-" Auto normal mode in terminal
-tnoremap <CR> <CR><c-\><c-n>
-tnoremap <c-c> <c-c><c-\><c-n>
-
 " Clear search hightlight
 nnoremap <silent> <CR> :noh<CR>
