@@ -35,7 +35,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Make <CR> auto-select the first completion
-inoremap <silent><expr> <cr pumvisible() ? coc#_select_configm()
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()<CR>"
 
 " Highlight the symbol and its reference when holding cursor
