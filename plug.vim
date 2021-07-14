@@ -29,16 +29,16 @@ Plug 'lambdalisue/fern-mapping-git.vim'
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
 
-" Language server
-Plug 'neoclide/coc.nvim', {'barnch': 'release'}
-
-" Syntax Highlighting
-Plug 'sheerun/vim-polyglot'
-
 " Dogrun theme
 Plug 'wadackel/vim-dogrun'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
+
+" Nvim Builtin LSP
+Plug 'neovim/nvim-lspconfig'
+
+" Nvim Completion
+Plug 'nvim-lua/completion-nvim'
 
 call plug#end()
