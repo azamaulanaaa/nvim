@@ -46,6 +46,3 @@ set updatetime=300
 
 " Always show tabline
 set showtabline=2
-
-" Clear search hightlight
-nnoremap <silent> <CR> :noh<CR>
