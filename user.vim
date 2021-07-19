@@ -38,8 +38,13 @@ set belloff=all
 
 " Load theme
 set cursorline
-set t_Co=256
-colorscheme dogrun
+if !has('gui_running')
+  set t_Co=256
+endif
+if has('termguicolors')
+  set termguicolors
+endif
+colorscheme onedark
 
 " Make it responseive
 set updatetime=300

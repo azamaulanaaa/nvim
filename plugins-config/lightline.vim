@@ -1,6 +1,6 @@
 " Lightline theme
 let g:lightline = {
-      \ 'colorscheme': 'dogrun',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " Disable nvim built-in show mode

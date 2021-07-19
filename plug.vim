@@ -32,8 +32,8 @@ Plug 'lambdalisue/fern-mapping-git.vim'
 " Fix performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
 
-" Dogrun theme
-Plug 'wadackel/vim-dogrun'
+" Onedark theme
+Plug 'joshdick/onedark.vim'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
