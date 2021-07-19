@@ -44,4 +44,7 @@ Plug 'neovim/nvim-lspconfig'
 " Nvim Completion
 Plug 'nvim-lua/completion-nvim'
 
+" Vim Polyglot
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
