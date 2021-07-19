@@ -31,7 +31,7 @@ local lsp_default_config = {
 
 local servers = {
   gopls = {
-    cmd = {'gopls', '--remote=auto'},
+    cmd = {'gopls', '-remote=auto'},
     init_options = {
       usePlaceholders = true,
       completeUnimported = true,
