@@ -11,6 +11,9 @@ call plug#begin(stdpath('config').'/plugins')
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
+" Fugitive
+Plug 'tpope/vim-fugitive'
+
 " Nerdfont
 Plug 'lambdalisue/nerdfont.vim'
 
