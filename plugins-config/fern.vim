@@ -1,5 +1,5 @@
 " Open fern with <C-o>
-noremap <silent><C-o> :Fern . -reveal=% -drawer -toggle<CR>
+nmap <silent><C-o> :Fern . -reveal=% -drawer -toggle<CR><Plug>(fern-action-zoom:reset)
 
 " Enable nerdfont
 let g:fern#renderer = "nerdfont"
