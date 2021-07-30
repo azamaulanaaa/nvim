@@ -47,4 +47,7 @@ Plug 'nvim-lua/completion-nvim'
 " Vim Polyglot
 Plug 'sheerun/vim-polyglot'
 
+" One theme
+Plug 'rakr/vim-one'
+
 call plug#end()
