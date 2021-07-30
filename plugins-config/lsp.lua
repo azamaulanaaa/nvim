@@ -38,6 +38,7 @@ local servers = {
       },
     }, 
   tsserver = {}, 
+  pyright = {},
 }
 
 for server, config in pairs(servers) do
