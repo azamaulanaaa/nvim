@@ -18,5 +18,5 @@ let g:NERDTreeGitStatusUseNerdFonts = 1
 
 let g:NERDTreeGitStatusConcealBrackets = 1
 
-autocmd FileType nerdtree nmap l o
-autocmd FileType nerdtree nmap h x
+"autocmd FileType nerdtree nmap l o
+"autocmd FileType nerdtree nmap h x
