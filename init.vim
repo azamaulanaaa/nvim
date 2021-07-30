@@ -6,9 +6,6 @@ runtime user.vim
 
 " Import plugins configuration
 
-" Import fern config
-runtime plugins-config/fern.vim
-
 " Import lightline config
 runtime plugins-config/lightline.vim
 
@@ -20,3 +17,6 @@ runtime plugins-config/vimwiki.vim
 
 " Import treesitter config
 runtime plugins-config/treesitter.vim
+
+" Import nerdtree config
+runtime plugins-config/nerdtree.vim

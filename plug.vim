@@ -14,24 +14,6 @@ Plug 'airblade/vim-gitgutter'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
-" Nerdfont
-Plug 'lambdalisue/nerdfont.vim'
-
-" File tree explorer
-Plug 'lambdalisue/fern.vim'
-
-" git status plugins for fern
-Plug 'lambdalisue/fern-git-status.vim'
-
-" Nerdfont for ferm
-Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-
-" Git stage for fern
-Plug 'lambdalisue/fern-mapping-git.vim'
-
-" Fix performance issue
-Plug 'antoinemadec/FixCursorHold.nvim'
-
 " Onedark theme
 Plug 'joshdick/onedark.vim'
 
@@ -55,5 +37,11 @@ Plug 'rakr/vim-one'
 
 " Vimwiki
 Plug 'vimwiki/vimwiki'
+
+" NerdTree
+Plug 'preservim/nerdtree' |
+      \ Plug 'xuyuanp/nerdtree-git-plugin' |
+      \ Plug 'ryanoasis/vim-devicons' |
+      \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
