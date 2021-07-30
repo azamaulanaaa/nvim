@@ -21,6 +21,34 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', default_opts)
   buf_set_keymap('i', '<tab>', 'pumvisible() ? "\\<c-n>" : "\\<tab>"', expr_opts)
   buf_set_keymap('i', '<s-tab>', 'pumvisible() ? "\\<c-p>" : "\\<s-tab>"', expr_opts)
+
+  vim.lsp.protocol.CompletionItemKind = {
+    ' [text]', -- Text
+    ' [method]', -- Method
+    ' [function]', -- Function
+    ' [constructor]', -- Constructor
+    ' [field]', -- Field
+    ' [variable]', -- Variable
+    ' [class]', -- Class
+    'ﰮ [interface]', -- Interface
+    ' [module]', -- Module
+    ' [property]', -- Property
+    ' [unit]', -- Unit
+    ' [value]', -- Value
+    ' [enum]', -- Enum
+    ' [keyword]', -- Keyword
+    '﬌ [snippet]', -- Snippet
+    ' [color]', -- Color
+    ' [file]', -- File
+    ' [reference]', -- Reference
+    ' [folder]', -- Folder
+    ' [enum member]', -- EnumMember
+    ' [constant]', -- Constant
+    ' [struct]', -- Struct
+    ' [event]', -- Event
+    'ﬦ [operator]', -- Operator
+    ' [type parameter]', -- TypeParameter
+  }
 end
 
 
