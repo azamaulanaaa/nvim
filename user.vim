@@ -43,7 +43,7 @@ if has('termguicolors')
 endif
 
 set background=light
-colorscheme one
+colorscheme onedark
 
 " Make it responseive
 set updatetime=300
