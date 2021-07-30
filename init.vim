@@ -17,3 +17,6 @@ luafile ~/.config/nvim/plugins-config/lsp.lua
 
 " Import vimwiki config
 runtime plugins-config/vimwiki.vim
+
+" Import treesitter config
+runtime plugins-config/treesitter.vim

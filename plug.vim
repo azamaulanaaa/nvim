@@ -45,7 +45,10 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 
 " Vim Polyglot
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " One theme
 Plug 'rakr/vim-one'
