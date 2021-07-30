@@ -50,4 +50,7 @@ Plug 'sheerun/vim-polyglot'
 " One theme
 Plug 'rakr/vim-one'
 
+" Vimwiki
+Plug 'vimwiki/vimwiki'
+
 call plug#end()

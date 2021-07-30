@@ -14,3 +14,6 @@ runtime plugins-config/lightline.vim
 
 " Import lsp config
 luafile ~/.config/nvim/plugins-config/lsp.lua
+
+" Import vimwiki config
+runtime plugins-config/vimwiki.vim
