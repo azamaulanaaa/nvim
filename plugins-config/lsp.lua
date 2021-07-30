@@ -1,8 +1,7 @@
 local lsp_config = require('lspconfig')
-local lsp_completion = require('completion')
 
 local on_attach = function(client, bufnr)
-  lsp_completion.on_attach(client)
+  require('completion').on_attach(client, bufnr)
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
