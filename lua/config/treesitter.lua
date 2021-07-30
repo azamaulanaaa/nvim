@@ -1,9 +1,4 @@
-if !exists('g:loaded_nvim_treesitter')
-  finish
-endif
-
-lua <<EOF
-require 'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   hightlight = {
     enable = true,
     disable = {},
@@ -26,5 +21,3 @@ require 'nvim-treesitter.configs'.setup {
     'python',
   },
 }
-
-EOF
