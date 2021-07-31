@@ -33,7 +33,14 @@ return require('packer').startup(
 		config('nvimtree')
 
     -- Git
-    use 'airblade/vim-gitgutter'
+    use {
+			'lewis6991/gitsigns.nvim',
+			requires = {
+				{'nvim-lua/plenary.nvim'},
+			},
+		}
+		config('gitsigns')
+
     use 'tpope/vim-fugitive'
 
     -- LSP Client
