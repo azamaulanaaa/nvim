@@ -51,5 +51,9 @@ return require('packer').startup(
       run = ':TSUpdate'
     }
     config('treesitter')
+
+		-- Indent line
+		use 'lukas-reineke/indent-blankline.nvim'
+		config('blankline')
   end
 )
