@@ -38,5 +38,8 @@ return require('packer').startup(
 
 		-- Indent line
 		plugin('blankline')
+
+		-- File search
+		plugin('telescope')
   end
 )
