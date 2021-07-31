@@ -1,5 +1,4 @@
 -- Bootstrap
-
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -10,6 +9,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
+-- Plugins
 return require('packer').startup(
   function()
     function config(path) require('config/'..path) end
@@ -26,15 +26,11 @@ return require('packer').startup(
     config('vimwiki')
 
     -- File explorer
-    use { 
-      'preservim/nerdtree',
-      requires = {
-        {'xuyuanp/nerdtree-git-plugin'},
-        {'ryanoasis/vim-devicons'},
-        {'tiagofumo/vim-nerdtree-syntax-highlight'},
-      },
-    }
-    config('nerdtree')
+		use {
+			'kyazdani42/nvim-tree.lua',
+			requires={'kyazdani42/nvim-web-devicons'},
+		}
+		config('nvimtree')
 
     -- Git
     use 'airblade/vim-gitgutter'
