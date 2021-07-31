@@ -1,3 +1,12 @@
+local present, icons = pcall(require, "lspconfig")
+if not present then
+	return
+end
+local present, icons = pcall(require, "completion")
+if not present then
+	return
+end
+
 local lsp_config = require('lspconfig')
 
 local on_attach = function(client, bufnr)
