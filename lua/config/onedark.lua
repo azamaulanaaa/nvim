@@ -13,9 +13,7 @@ return {
 		-- Set colorscheme for nvim
 		vim.cmd('colorscheme onedark')
 
-		-- Set colorscheme for lightline
-		vim.g.lightline = { 
-			colorscheme = "onedark"
-		}
+		-- Remove statusline background
+		vim.cmd('highlight clear StatusLine')
 	end,
 }

@@ -18,7 +18,7 @@ return require('packer').startup(
 		plugin('onedark')
 
     -- Statusline
-		plugin('lightline')
+		plugin('galaxyline')
 
     -- Journal system
 		plugin('vimwiki')
