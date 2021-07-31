@@ -1,6 +1,9 @@
-local present, icons = pcall(require, "gitsigns")
-if not present then
-	return
-end
-
-require('gitsigns').setup()
+return {
+	'lewis6991/gitsigns.nvim',
+	requires = {
+		{ 'nvim-lua/plenary.nvim' },
+	},
+	config = function() 
+		require('config/gitsigns') 
+	end,
+}

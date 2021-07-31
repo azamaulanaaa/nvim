@@ -1,28 +1,29 @@
-local present, icons = pcall(require, "nvim-treesitter")
-if not present then
-	return
-end
-
-require('nvim-treesitter.configs').setup {
-  hightlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = false,
-    disable = {},
-  },
-  ensure_installed = {
-    'bash',
-    'javascript',
-    'typescript',
-    'tsx',
-    'json',
-    'yaml',
-    'html',
-    'go',
-    'lua',
-    'dockerfile',
-    'python',
-  },
+return {
+	'nvim-treesitter/nvim-treesitter', 
+	run = ':TSUpdate',
+	config = function()
+		require('nvim-treesitter.configs').setup {
+			hightlight = {
+				enable = true,
+				disable = {},
+			},
+			indent = {
+				enable = false,
+				disable = {},
+			},
+			ensure_installed = {
+				'bash',
+				'javascript',
+				'typescript',
+				'tsx',
+				'json',
+				'yaml',
+				'html',
+				'go',
+				'lua',
+				'dockerfile',
+				'python',
+			},
+		}
+	end,
 }

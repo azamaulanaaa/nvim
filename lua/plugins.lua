@@ -12,55 +12,31 @@ end
 -- Plugins
 return require('packer').startup(
   function()
-    function config(path) require('config/'..path) end
+    function plugin(path) use(require('config/'..path)) end
     
     -- Theme
-    use 'joshdick/onedark.vim'
-    config('onedark')
+		plugin('onedark')
 
     -- Statusline
-    use 'itchyny/lightline.vim'
+		plugin('lightline')
 
     -- Journal system
-    use 'vimwiki/vimwiki'
-    config('vimwiki')
+		plugin('vimwiki')
 
     -- File explorer
-		use {
-			'kyazdani42/nvim-tree.lua',
-			requires={'kyazdani42/nvim-web-devicons'},
-		}
-		config('nvimtree')
+		plugin('nvimtree')
 
     -- Git
-    use {
-			'lewis6991/gitsigns.nvim',
-			requires = {
-				{'nvim-lua/plenary.nvim'},
-			},
-		}
-		config('gitsigns')
-
-    use 'tpope/vim-fugitive'
+		plugin('gitsigns')
+		plugin('fugitive')
 
     -- LSP Client
-    use {
-      'neovim/nvim-lspconfig',
-      requires = {
-        {'nvim-lua/completion-nvim'},
-      },
-    }
-    config('lsp')
+		plugin('lsp')
 
     -- Syntax Highlighter
-    use {
-      'nvim-treesitter/nvim-treesitter', 
-      run = ':TSUpdate'
-    }
-    config('treesitter')
+		plugin('treesitter')
 
 		-- Indent line
-		use 'lukas-reineke/indent-blankline.nvim'
-		config('blankline')
+		plugin('blankline')
   end
 )
