@@ -7,15 +7,27 @@ if not present then
 	return
 end
 
-local lsp_config = require('lspconfig')
+-- LSP server
+local servers = {
+  gopls = {
+    cmd = {'gopls', '-remote=auto'},
+    init_options = {
+      usePlaceholders = true,
+      completeUnimported = true,
+      },
+    }, 
+  tsserver = {}, 
+  pyright = {},
+}
 
+-- LSP on attach
 local on_attach = function(client, bufnr)
+
+	-- Enable completion
   require('completion').on_attach(client, bufnr)
 
+	-- Keybindings
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-
   local default_opts = { noremap = true, silent = true }
   local expr_opts = { noremap = true, expr = true }
 
@@ -30,57 +42,20 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', default_opts)
   buf_set_keymap('i', '<tab>', 'pumvisible() ? "\\<c-n>" : "\\<tab>"', expr_opts)
   buf_set_keymap('i', '<s-tab>', 'pumvisible() ? "\\<c-p>" : "\\<s-tab>"', expr_opts)
-
-  vim.lsp.protocol.CompletionItemKind = {
-    ' [text]', -- Text
-    ' [method]', -- Method
-    ' [function]', -- Function
-    ' [constructor]', -- Constructor
-    ' [field]', -- Field
-    ' [variable]', -- Variable
-    ' [class]', -- Class
-    'ﰮ [interface]', -- Interface
-    ' [module]', -- Module
-    ' [property]', -- Property
-    ' [unit]', -- Unit
-    ' [value]', -- Value
-    ' [enum]', -- Enum
-    ' [keyword]', -- Keyword
-    '﬌ [snippet]', -- Snippet
-    ' [color]', -- Color
-    ' [file]', -- File
-    ' [reference]', -- Reference
-    ' [folder]', -- Folder
-    ' [enum member]', -- EnumMember
-    ' [constant]', -- Constant
-    ' [struct]', -- Struct
-    ' [event]', -- Event
-    'ﬦ [operator]', -- Operator
-    ' [type parameter]', -- TypeParameter
-  }
 end
 
-
+-- Default LSP config
 local lsp_default_config = {
   on_attach = on_attach,
 }
 
-local servers = {
-  gopls = {
-    cmd = {'gopls', '-remote=auto'},
-    init_options = {
-      usePlaceholders = true,
-      completeUnimported = true,
-      },
-    }, 
-  tsserver = {}, 
-  pyright = {},
-}
-
+-- Load LSP config
+local lsp_config = require('lspconfig')
 for server, config in pairs(servers) do
   lsp_config[server].setup(vim.tbl_deep_extend('force', lsp_default_config, config))
 end
 
+-- LSP diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = false,
@@ -89,5 +64,35 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+-- Completion menu
 vim.o.completeopt = "menuone,noinsert,noselect"
 vim.o.shortmess = vim.o.shortmess .. "c"
+
+-- Completion icons
+vim.lsp.protocol.CompletionItemKind = {
+	' [text]', -- Text
+	' [method]', -- Method
+	' [function]', -- Function
+	' [constructor]', -- Constructor
+	' [field]', -- Field
+	' [variable]', -- Variable
+	' [class]', -- Class
+	'ﰮ [interface]', -- Interface
+	' [module]', -- Module
+	' [property]', -- Property
+	' [unit]', -- Unit
+	' [value]', -- Value
+	' [enum]', -- Enum
+	' [keyword]', -- Keyword
+	'﬌ [snippet]', -- Snippet
+	' [color]', -- Color
+	' [file]', -- File
+	' [reference]', -- Reference
+	' [folder]', -- Folder
+	' [enum member]', -- EnumMember
+	' [constant]', -- Constant
+	' [struct]', -- Struct
+	' [event]', -- Event
+	'ﬦ [operator]', -- Operator
+	' [type parameter]', -- TypeParameter
+}
