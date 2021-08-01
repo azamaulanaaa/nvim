@@ -15,31 +15,31 @@ return require('packer').startup(
     function plugin(path) use(require('config/'..path)) end
     
     -- Theme
-		plugin('onedark')
+		plugin 'onedark'
 
     -- Statusline
-		plugin('galaxyline')
+		plugin 'galaxyline'
 
     -- Journal system
-		plugin('vimwiki')
+		plugin 'vimwiki'
 
     -- File explorer
-		plugin('nvimtree')
+		plugin 'nvimtree'
 
     -- Git
-		plugin('gitsigns')
-		plugin('fugitive')
+		plugin 'gitsigns'
+		plugin 'fugitive'
 
     -- LSP Client
-		plugin('lsp')
+		plugin 'lsp'
 
     -- Syntax Highlighter
-		plugin('treesitter')
+		plugin 'treesitter'
 
 		-- Indent line
-		plugin('blankline')
+		plugin 'blankline'
 
 		-- File search
-		plugin('telescope')
+		plugin 'telescope'
   end
 )
