@@ -11,14 +11,22 @@ return {
 		local gl = require('galaxyline')
 		local colors = require('galaxyline.theme').default
 		local condition = require('galaxyline.condition')
+		local gls = gl.section
+
+		-- Reset section
+		gls.left = {}
+		gls.mid = {}
+		gls.right = {}
+		gls.short_line_left = {}
+		gls.short_line_right = {}
 
 		-- Custom function
-		function left(element) table.insert(gl.section.left, element) end
-		function mid(element) table.insert(gl.section.mid, element) end
-		function right(element) table.insert(gl.section.right, element) end
+		function left(element) table.insert(gls.left, element) end
+		function mid(element) table.insert(gls.mid, element) end
+		function right(element) table.insert(gls.right, element) end
 		function shortline(list) gl.short_line_list = list end
-		function shortline_left(element) table.insert(gl.section.short_line_left, element) end
-		function shortline_right(element) table.insert(gl.section.short_line_right, element) end
+		function shortline_left(element) table.insert(gls.short_line_left, element) end
+		function shortline_right(element) table.insert(gls.short_line_right, element) end
 
 		-- Shortline list
 		shortline {'NvimTree', 'packer'}
