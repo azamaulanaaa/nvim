@@ -11,7 +11,7 @@ vim.o.mouse = 'a'
 vim.o.belloff = 'all'
 
 -- Responsive
-vim.o.updatetime = 300
+vim.o.updatetime = 250
 
 -- Text encoding
 vim.o.encoding = 'utf-8'
