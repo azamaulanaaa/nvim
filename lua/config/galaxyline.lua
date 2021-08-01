@@ -1,6 +1,6 @@
 return {
 	'glepnir/galaxyline.nvim',
-	require = {
+	requires = { 
 		{ 'kyazdani42/nvim-web-devicons' },
 	},
 	config = function()
