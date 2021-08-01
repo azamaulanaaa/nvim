@@ -44,5 +44,8 @@ return require('packer').startup(
 
 		-- File search
 		plugin 'telescope'
+
+		-- Suggetion for nvim command
+		plugin 'wilder'
   end
 )
