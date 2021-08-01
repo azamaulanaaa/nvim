@@ -68,31 +68,31 @@ return {
 
 		-- Completion icons
 		vim.lsp.protocol.CompletionItemKind = {
-			' [text]', -- Text
-			' [method]', -- Method
-			' [function]', -- Function
-			' [constructor]', -- Constructor
-			' [field]', -- Field
-			' [variable]', -- Variable
-			' [class]', -- Class
-			'ﰮ [interface]', -- Interface
-			' [module]', -- Module
-			' [property]', -- Property
-			' [unit]', -- Unit
-			' [value]', -- Value
-			' [enum]', -- Enum
-			' [keyword]', -- Keyword
-			'﬌ [snippet]', -- Snippet
-			' [color]', -- Color
-			' [file]', -- File
-			' [reference]', -- Reference
-			' [folder]', -- Folder
-			' [enum member]', -- EnumMember
-			' [constant]', -- Constant
-			' [struct]', -- Struct
-			' [event]', -- Event
-			'ﬦ [operator]', -- Operator
-			' [type parameter]', -- TypeParameter
+			' ', -- Text
+			' ', -- Method
+			' ', -- Function
+			' ', -- Constructor
+			' ', -- Field
+			' ', -- Variable
+			' ', -- Class
+			'ﰮ ', -- Interface
+			' ', -- Module
+			' ', -- Property
+			' ', -- Unit
+			' ', -- Value
+			' ', -- Enum
+			' ', -- Keyword
+			'﬌ ', -- Snippet
+			' ', -- Color
+			' ', -- File
+			' ', -- Reference
+			' ', -- Folder
+			' ', -- EnumMember
+			' ', -- Constant
+			' ', -- Struct
+			' ', -- Event
+			'ﬦ ', -- Operator
+			' ', -- TypeParameter
 		}
 	end,
 }
