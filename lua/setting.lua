@@ -1,23 +1,28 @@
--- Memory management
-vim.cmd('noswapfile')
+function setting()
+	local setup = {
+		backup					= false,
+		writebackup			= false,
+		swapfile				= false,
+		encoding				=	'utf-8',
+		relativenumber	= true,
+		belloff					= 'all',
+		updatetime			= 100,
+		redrawtime			= 1500,
+		timeout					= true,
+		timeoutlen			= 500,
+		ttimeout				= true,
+		ttimeoutlen			= 10,
+		tabstop					= 2,
+		shiftwidth			= 2,
+		softtabstop			=	-1,
+		smartindent			= true,
+		shiftround			= true,
+		scrolloff				= 2,
+	}
 
--- Line number
-vim.o.relativenumber = true
+	for name, value in pairs(setup) do
+		vim.o[name] = value
+	end
+end
 
--- Mouse support
-vim.o.mouse = 'a'
-
--- Disable error beep
-vim.o.belloff = 'all'
-
--- Responsive
-vim.o.updatetime = 250
-
--- Text encoding
-vim.o.encoding = 'utf-8'
-vim.o.fileencoding = 'utf-8'
-
--- Tab system
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.smartindent = true
+setting()
