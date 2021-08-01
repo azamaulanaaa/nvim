@@ -8,5 +8,8 @@ return {
 				ext = '.md',
 			},
 		}
+
+		-- Spell checking
+		vim.cmd('autocmd filetype vimwiki setlocal spell spelllang=en_us')	
 	end,
 }
