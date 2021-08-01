@@ -43,7 +43,7 @@ return require('packer').startup(
 		plugin 'blankline'
 
 		-- File search
-		plugin 'telescope'
+		plugin 'fzf'
 
 		-- Suggetion for nvim command
 		plugin 'wilder'
