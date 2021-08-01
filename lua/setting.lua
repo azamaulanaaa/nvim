@@ -13,9 +13,6 @@ vim.o.belloff = 'all'
 -- Responsive
 vim.o.updatetime = 300
 
--- Show tab bar
-vim.o.showtabline = 2
-
 -- Text encoding
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
