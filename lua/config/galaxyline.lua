@@ -4,6 +4,9 @@ return {
 		{ 'kyazdani42/nvim-web-devicons' },
 	},
 	config = function()
+		-- Disable showmode
+		vim.o.showmode = false
+
 		-- Load galaxyline
 		local gl = require('galaxyline')
 		local colors = require('galaxyline.theme').default
