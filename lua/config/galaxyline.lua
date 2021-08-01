@@ -166,14 +166,14 @@ return {
 			},
 		}
 
-		right {
-			PerCent = {
-				provider = 'LinePercent',
-				separator = ' ',
-				separator_highlight = {'NONE'},
-				highlight = {colors.fg},
-			}
-		}
+		--right {
+		--	PerCent = {
+		--		provider = 'LinePercent',
+		--		separator = ' ',
+		--		separator_highlight = {'NONE'},
+		--		highlight = {colors.fg},
+		--	}
+		--}
 
 		right {
 			LineInfo = {
@@ -201,29 +201,29 @@ return {
 		}
 
 		-- Shortline left
-		--shortline_left {
-		--	RainbowRed = {
-		--		provider = function() return '▊ ' end,
-		--		highlight = {colors.blue}
-		--	},
-		--}
+		shortline_left {
+			RainbowRed = {
+				provider = function() return '▊ ' end,
+				highlight = {colors.blue}
+			},
+		}
 
-		--shortline_left {
-		--	BufferType = {
-		--		provider = 'FileTypeName',
-		--		separator = ' ',
-		--		separator_highlight = {'NONE'},
-		--		highlight = {colors.blue}
-		--	}
-		--}
+		shortline_left {
+			BufferType = {
+				provider = 'FileTypeName',
+				separator = ' ',
+				separator_highlight = {'NONE'},
+				highlight = {colors.blue}
+			}
+		}
 
-		--shortline_left {
-		--	SFileName = {
-		--		provider =  'SFileName',
-		--		condition = condition.buffer_not_empty,
-		--		highlight = {colors.fg}
-		--	}
-		--}
+		shortline_left {
+			SFileName = {
+				provider =  'SFileName',
+				condition = condition.buffer_not_empty,
+				highlight = {colors.fg}
+			}
+		}
 
 		-- Shortline right
 		--shortline_right {
