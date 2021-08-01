@@ -20,3 +20,4 @@ vim.o.fileencoding = 'utf-8'
 -- Tab system
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
+vim.o.smartindent = true
