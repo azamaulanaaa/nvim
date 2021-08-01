@@ -7,10 +7,6 @@ return {
 				enable = true,
 				disable = {},
 			},
-			indent = {
-				enable = false,
-				disable = {},
-			},
 			ensure_installed = {
 				'bash',
 				'javascript',
