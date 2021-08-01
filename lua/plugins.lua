@@ -14,6 +14,9 @@ return require('packer').startup(
   function()
     function plugin(path) use(require('config/'..path)) end
     
+		-- Manage it self
+		use 'wbthomason/packer.nvim'
+		
     -- Theme
 		plugin 'onedark'
 
