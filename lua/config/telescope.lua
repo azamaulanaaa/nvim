@@ -14,6 +14,6 @@ return {
 			},
 		}
 
-		vim.api.nvim_set_keymap('n', '<leader>f', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true } )
+		vim.api.nvim_set_keymap('n', '<leader>f', require('telescope.builtin').find_files, { noremap = true, silent = true } )
 	end,
 }
