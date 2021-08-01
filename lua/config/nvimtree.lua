@@ -39,6 +39,6 @@ return {
 		}
 
 		-- Keybinding
-		vim.api.nvim_set_keymap('n', '<c-o>', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
+		vim.api.nvim_set_keymap('n', '<c-o>', '<cmd>NvimTreeToggle<cr>', { noremap = true, silent = true })
 	end,
 }
