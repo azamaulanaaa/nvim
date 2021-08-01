@@ -29,6 +29,7 @@ return require('packer').startup(
     -- Git
 		plugin('gitsigns')
 		plugin('fugitive')
+		plugin('lazygit')
 
     -- LSP Client
 		plugin('lsp')
