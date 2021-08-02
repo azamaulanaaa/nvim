@@ -1,6 +1,21 @@
 return {
 	'nvim-treesitter/nvim-treesitter', 
 	run = ':TSUpdate',
+	opt = true,
+	ft = {
+		'bash',
+		'javascript',
+		'javascriptreact',
+		'typescript',
+		'typescriptreact',
+		'json',
+		'yaml',
+		'html',
+		'go',
+		'lua',
+		'dockerfile',
+		'python',
+	},
 	config = function()
 		require('nvim-treesitter.configs').setup {
 			hightlight = {
