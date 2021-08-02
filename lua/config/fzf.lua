@@ -9,10 +9,13 @@ return {
 		},
 		{ 'tpope/vim-fugitive' },
 	},
-	config = function()
+	opt = true,
+	keys = { '<leader>ff' },
+	setup = function()
 		-- Disable preview window
 		vim.g.fzf_preview_window = {}
-
+	end,
+	config = function()
 		-- Custom FZF
 		function fzf()
 			if vim.fn['fugitive#head']() ~= '' then
@@ -26,6 +29,6 @@ return {
 		end
 		
 		-- Keybinding
-		vim.api.nvim_set_keymap('n', '<leader>f', [[<cmd>lua fzf()<cr>]], { noremap = true, silent = true})	
+		vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua fzf()<cr>]], { noremap = true, silent = true})	
 	end,
 }
