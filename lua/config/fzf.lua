@@ -10,7 +10,9 @@ return {
 		{ 'tpope/vim-fugitive' },
 	},
 	opt = true,
-	keys = { '<leader>ff' },
+	keys = { 
+		{'n', '<leader>ff' },
+	},
 	setup = function()
 		-- Disable preview window
 		vim.g.fzf_preview_window = {}

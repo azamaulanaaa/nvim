@@ -4,7 +4,9 @@ return {
 		{ 'kyazdani42/nvim-web-devicons' }
 	},
 	opt = true,
-	keys = { '<c-o>' },
+	keys = { 
+		{ 'n', '<c-o>' },
+	},
 	setup = function()
 		local config = {
 			nvim_tree_side									= 'left',

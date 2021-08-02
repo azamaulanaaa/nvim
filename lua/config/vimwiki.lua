@@ -2,7 +2,9 @@ return {
 	'vimwiki/vimwiki',
 	opt = true,
 	ft = { 'markdown' },
-	keys = { '<leader>ww' },
+	keys = { 
+		{ 'n', '<leader>ww' },
+	},
 	setup = function()
 		vim.g.vimwiki_list = {
 			{
