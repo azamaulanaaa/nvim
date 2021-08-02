@@ -7,6 +7,9 @@ return {
 		-- Disable showmode
 		vim.o.showmode = false
 
+		-- Disable ruler
+		vim.o.ruler = false
+
 		-- Load galaxyline
 		local gl = require('galaxyline')
 		local colors = require('galaxyline.theme').default
