@@ -3,7 +3,9 @@ return {
 	requires = {
 		{ 'kyazdani42/nvim-web-devicons' }
 	},
-	config = function()
+	opt = true,
+	keys = { '<c-o>' },
+	setup = function()
 		local config = {
 			nvim_tree_side									= 'left',
 			nvim_tree_width									= 30,
@@ -34,7 +36,8 @@ return {
 		for name, value in pairs(config) do
 			vim.g[name] = value
 		end
-
+	end,
+	config = function()
 		-- Keybinding
 		vim.api.nvim_set_keymap('n', '<c-o>', '<cmd>NvimTreeToggle<cr>', { noremap = true, silent = true })
 	end,
