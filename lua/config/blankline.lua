@@ -1,6 +1,6 @@
 return {
 	'lukas-reineke/indent-blankline.nvim',
-	config = function()
+	setup = function()
 
 		local config = {
 			indent_blankline_filetype_exclude									= { "help", "terminal", "dashboard" },
