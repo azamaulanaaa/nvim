@@ -15,5 +15,6 @@ return {
 
 		-- Remove statusline background
 		vim.cmd('highlight clear StatusLine')
+		vim.cmd('highlight EndOfBuffer guifg=#282C34')
 	end,
 }
