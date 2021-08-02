@@ -3,6 +3,15 @@ return {
 	requires = {
 		{ 'nvim-lua/completion-nvim' },
 	},
+	opt = true,
+	ft = { 
+		'go',
+		'javascript',
+		'javascriptreact',
+		'typescript',
+		'typescriptreact',
+		'python',
+	},
 	config = function()
 
 		-- LSP server
