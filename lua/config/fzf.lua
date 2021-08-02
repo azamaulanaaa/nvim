@@ -7,7 +7,6 @@ return {
 				vim.fn['fzf#install']()
 			end,
 		},
-		{ 'tpope/vim-fugitive' },
 	},
 	opt = true,
 	keys = { 
@@ -20,7 +19,8 @@ return {
 	config = function()
 		-- Custom FZF
 		function fzf()
-			if vim.fn['fugitive#head']() ~= '' then
+			local packer_fugitive = packer_plugins['vim-fugitive']
+			if packer_fugitive and packer_fugitive.loaded and vim.fn['fugitive#head']() ~= '' then
 				-- Ignore files in .gitignore
 				vim.cmd('GFiles --cached --others --exclude-standard')
 				return
