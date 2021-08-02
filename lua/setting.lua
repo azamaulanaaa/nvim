@@ -5,6 +5,8 @@ function setting()
 		swapfile				= false,
 		encoding				=	'utf-8',
 		relativenumber	= true,
+		numberwidth			= 1,
+		signcolumn			= 'yes',
 		belloff					= 'all',
 		updatetime			= 100,
 		redrawtime			= 1500,
