@@ -1,6 +1,9 @@
 return {
 	'vimwiki/vimwiki',
-	config = function()
+	opt = true,
+	ft = { 'markdown' },
+	keys = { '<leader>ww' },
+	setup = function()
 		vim.g.vimwiki_list = {
 			{
 				path = '~/journal',
@@ -8,7 +11,8 @@ return {
 				ext = '.md',
 			},
 		}
-
+	end,
+	config = function()
 		-- Spell checking
 		vim.cmd('autocmd filetype vimwiki setlocal spell spelllang=en_us')	
 	end,
