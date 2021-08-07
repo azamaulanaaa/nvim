@@ -1,8 +1,5 @@
 return {
 	'neovim/nvim-lspconfig',
-	requires = {
-		{ 'nvim-lua/completion-nvim' },
-	},
 	opt = true,
 	ft = { 
 		'go',
@@ -30,9 +27,6 @@ return {
 		-- LSP on attach
 		local on_attach = function(client, bufnr)
 
-			-- Enable completion
-			require('completion').on_attach(client, bufnr)
-
 			-- Keybindings
 			local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 			local default_opts = { noremap = true, silent = true }
@@ -47,8 +41,6 @@ return {
 			buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>', default_opts)
 			buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>', default_opts)
 			buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', default_opts)
-			buf_set_keymap('i', '<tab>', "pumvisible() ? '<c-n>' : '<tab>'", expr_opts)
-			buf_set_keymap('i', '<s-tab>', "pumvisible() ? '<c-p>' : '<s-tab>'", expr_opts)
 		end
 
 		-- Default LSP config
@@ -70,10 +62,6 @@ return {
 				update_in_insert = true,
 			}
 		)
-
-		-- Completion menu
-		vim.o.completeopt = 'menuone,noinsert,noselect'
-		vim.o.shortmess = vim.o.shortmess .. 'c'
 
 		-- Completion icons
 		vim.lsp.protocol.CompletionItemKind = {

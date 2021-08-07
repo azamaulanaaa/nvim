@@ -47,5 +47,8 @@ return require('packer').startup(
 
 		-- Suggetion for nvim command
 		plugin 'wilder'
+
+		-- Completion
+		plugin 'compe'
   end
 )
