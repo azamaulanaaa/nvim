@@ -14,7 +14,7 @@ return {
 		-- LSP server
 		local servers = {
 			gopls = {
-				cmd = {'gopls', '-remote=auto'},
+				cmd = {'gopls'},
 				init_options = {
 					usePlaceholders = true,
 					completeUnimported = true,
