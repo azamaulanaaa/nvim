@@ -24,6 +24,8 @@ function setting()
     backspace       = 'indent,eol,start',
 		shiftround			= true,
 		scrolloff				= 2,
+		sidescrolloff		= 5,
+		wrap					= false,
 	}
 
 	for name, value in pairs(setup) do
