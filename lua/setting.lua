@@ -17,7 +17,11 @@ function setting()
 		tabstop					= 2,
 		shiftwidth			= 2,
 		softtabstop			=	-1,
+		autoindent			= true,
 		smartindent			= true,
+		expandtab				= true,
+		smarttab				= true,
+    backspace       = 'indent,eol,start',
 		shiftround			= true,
 		scrolloff				= 2,
 	}
@@ -25,6 +29,8 @@ function setting()
 	for name, value in pairs(setup) do
 		vim.o[name] = value
 	end
+
+  vim.cmd('filetype plugin on')
 end
 
 setting()
