@@ -5,6 +5,7 @@ return {
 		'go',
 		'javascript',
 		'javascriptreact',
+        'rust',
 		'typescript',
 		'typescriptreact',
 		'python',
@@ -22,6 +23,7 @@ return {
 				}, 
 			tsserver = {}, 
 			pyright = {},
+            rust_analyzer = {},
 		}
 
 		-- LSP on attach
@@ -29,6 +31,10 @@ return {
 
 			-- Keybindings
 			local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+            buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
 			local default_opts = { noremap = true, silent = true }
 			local expr_opts = { noremap = true, expr = true }
 
