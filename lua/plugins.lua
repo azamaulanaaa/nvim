@@ -5,50 +5,50 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  execute 'packadd packer.nvim'
+    fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+    execute 'packadd packer.nvim'
 end
 
 -- Plugins
 return require('packer').startup(
-  function()
-    function plugin(path) use(require('config.'..path)) end
-    
-		-- Manage it self
-		use 'wbthomason/packer.nvim'
-		
-    -- Theme
-		plugin 'onedark'
+    function()
+        function plugin(path) use(require('config.'..path)) end
 
-    -- Statusline
-		plugin 'galaxyline'
+        -- Manage it self
+        use 'wbthomason/packer.nvim'
+            
+        -- Theme
+        plugin 'onedark'
 
-    -- Journal system
-		plugin 'vimwiki'
+        -- Statusline
+        plugin 'galaxyline'
 
-    -- File explorer
-		plugin 'nvimtree'
+        -- Journal system
+        plugin 'vimwiki'
 
-    -- Git
-		plugin 'gitsigns'
-		plugin 'fugitive'
+        -- File explorer
+        plugin 'nvimtree'
 
-    -- LSP Client
-		plugin 'lsp'
+        -- Git
+        plugin 'gitsigns'
+        plugin 'fugitive'
 
-    -- Syntax Highlighter
-		plugin 'treesitter'
+        -- LSP Client
+        plugin 'lsp'
 
-		-- Indent line
-		plugin 'blankline'
+        -- Syntax Highlighter
+        plugin 'treesitter'
 
-		-- File search
-		plugin 'fzf'
+        -- Indent line
+        plugin 'blankline'
 
-		-- Suggetion for nvim command
-		plugin 'wilder'
+        -- File search
+        plugin 'fzf'
 
-		-- Completion
-		plugin 'compe'
-  end
+        -- Suggetion for nvim command
+        plugin 'wilder'
+
+        -- Completion
+        plugin 'compe'
+    end
 )
