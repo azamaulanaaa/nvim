@@ -50,5 +50,8 @@ return require('packer').startup(
 
         -- Completion
         plugin 'compe'
+
+        -- Formatter
+        plugin 'formatter'
     end
 )
