@@ -9,7 +9,6 @@ return {
     },
     setup = function()
         local config = {
-            nvim_tree_hide_dotfiles = 1,
             nvim_tree_root_folder_modifier = table.concat {':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??'},
             nvim_tree_add_trailing = 0,
             nvim_tree_indent_markers = 1,
@@ -32,6 +31,9 @@ return {
            auto_close = true,
            update_focused_file = {
                enable = true,
+           },
+           filters = {
+               dotfiles = true,
            },
         }
 
