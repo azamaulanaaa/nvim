@@ -53,5 +53,8 @@ return require('packer').startup(
 
         -- Formatter
         plugin 'formatter'
+
+        -- Collaboration
+        plugin 'instant'
     end
 )

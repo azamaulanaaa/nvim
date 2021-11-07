@@ -32,6 +32,14 @@ function setting()
         vim.o[name] = value
     end
 
+    local global = {
+        instant_username = "Aza Maulana",
+    }
+
+    for name, value in pairs(global) do
+        vim.g[name] = value
+    end
+
     vim.cmd('filetype plugin on')
 end
 
