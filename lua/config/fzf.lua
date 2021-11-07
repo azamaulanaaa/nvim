@@ -11,6 +11,7 @@ return {
     opt = true,
     keys = { 
         {'n', '<leader>ff' },
+        {'n', '<leader>bb' },
     },
     setup = function()
         -- Disable preview window
@@ -31,6 +32,7 @@ return {
         end
         
         -- Keybinding
-        vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua fzf()<cr>]], { noremap = true, silent = true})	
+        vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua fzf()<cr>]], { noremap = true, silent = true })	
+        vim.api.nvim_set_keymap('n', '<leader>bb', [[<cmd>Buffer<cr>]], { noremap = true, silent = true })
     end,
 }
