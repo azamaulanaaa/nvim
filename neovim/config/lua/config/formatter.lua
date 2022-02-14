@@ -3,6 +3,7 @@ return {
     opt = true,
     ft = {
         'rust',
+        'go',
     },
     config = function()
         require("formatter").setup({
@@ -15,6 +16,15 @@ return {
                             stdin = true,
                         }
                     end,
+                },
+                go = {
+                    function()
+                        return {
+                            exe = "gofmt",
+                            args = {vim.api.nvim_buf_get_name(0)},
+                            stdin = true,
+                        }
+                    end
                 },
             },
         })
