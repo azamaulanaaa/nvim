@@ -17,7 +17,7 @@ return {
         local gls               = gl.section
 
         -- Reset section
-        gls.Left                = {}
+        gls.left                = {}
         gls.mid                 = {}
         gls.right               = {}
         gls.short_line_left     = {}
