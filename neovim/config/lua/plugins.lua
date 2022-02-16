@@ -56,5 +56,8 @@ return require('packer').startup(
 
         -- Collaboration
         plugin 'instant'
+
+        -- Cursor Assist
+        plugin 'lightspeed'
     end
 )
