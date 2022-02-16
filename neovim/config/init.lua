@@ -1,8 +1,8 @@
--- Setting
-require('setting')
+-- Disable bloatware
+require('bloatware')
 
 -- Plugins
 require('plugins')
 
--- Disable bloatware
-require('bloatware')
+-- Setting
+require('setting')
