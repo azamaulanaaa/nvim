@@ -24,7 +24,7 @@ return require('packer').startup(
         plugin 'galaxyline'
 
         -- Journal system
-        plugin 'vimwiki'
+        -- plugin 'vimwiki'
 
         -- File explorer
         plugin 'nvimtree'
@@ -55,7 +55,7 @@ return require('packer').startup(
         plugin 'formatter'
 
         -- Collaboration
-        plugin 'instant'
+        -- plugin 'instant'
 
         -- Cursor Assist
         plugin 'lightspeed'
