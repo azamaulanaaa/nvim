@@ -49,7 +49,7 @@ return require('packer').startup(
         plugin 'wilder'
 
         -- Completion
-        plugin 'compe'
+        plugin 'cmp'
 
         -- Formatter
         plugin 'formatter'
