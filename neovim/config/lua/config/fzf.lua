@@ -7,6 +7,7 @@ return {
                 vim.fn['fzf#install']()
             end,
         },
+        { 'tpope/vim-fugitive' },
     },
     opt = true,
     keys = { 
