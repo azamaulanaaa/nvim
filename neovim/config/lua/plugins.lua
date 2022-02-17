@@ -23,9 +23,6 @@ return require('packer').startup(
         -- Statusline
         plugin 'galaxyline'
 
-        -- Journal system
-        -- plugin 'vimwiki'
-
         -- File explorer
         plugin 'nvimtree'
 
@@ -52,9 +49,6 @@ return require('packer').startup(
 
         -- Formatter
         plugin 'formatter'
-
-        -- Collaboration
-        -- plugin 'instant'
 
         -- Cursor Assist
         plugin 'lightspeed'
