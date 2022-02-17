@@ -24,16 +24,16 @@ return {
                             args = {vim.api.nvim_buf_get_name(0)},
                             stdin = true,
                         }
-                    end
+                    end,
                 },
             },
         })
         vim.api.nvim_exec([[
             augroup FormatAutogroup
                 autocmd!
-                autocmd BufWritePost *.rs, *.go FormatWrite
+                autocmd BufWritePost *.rs,*.go FormatWrite
             augroup END
         ]], true)
-end,
+    end,
 }
 
