@@ -16,6 +16,24 @@ return {
         local condition         = require('galaxyline.condition')
         local gls               = gl.section
 
+        -- Custom colors
+        local function link_color(name, attr)
+            local raw = vim.api.nvim_get_hl_by_name(name, true)[attr]
+            if raw == nil then
+                return 'NONE'
+            end
+
+            local value = string.format('#%06x', raw)
+
+            return value
+        end
+        
+        colors.fg               = link_color("StatusLine", "foreground")
+        colors.bg               = link_color("StatusLine", "background")
+
+        -- Shortline background
+        vim.cmd("hi! StatusLineNC guibg=" .. colors.bg)
+
         -- Reset section
         gls.left                = {}
         gls.mid                 = {}
@@ -36,9 +54,9 @@ return {
 
         -- Left
         left {
-            RainbowRed = {
-                provider = function() return '▊ ' end,
-                highlight = {colors.blue},
+            Border = {
+                provider = function() return ' ' end,
+                highlight = {'NONE', colors.bg},
             },
         }
 
@@ -70,29 +88,20 @@ return {
                     }
                     vim.cmd('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
     --					return ''
-                    return ''
+                    return '   '
                 end,
-                separator = ' ',
-                highlight = {colors.red},
-            },
-        }
-
-        left {
-            GitIcon = {
-                provider = function() return '  ' end,
-                condition = condition.check_git_workspace,
-                separator = ' ',
-                separator_highlight = {'NONE'},
-                highlight = {colors.violet},
+                highlight = {colors.fg, colors.bg},
             },
         }
 
         left {
             GitBranch = {
-                provider = 'GitBranch',
-                separator = ' ',
                 condition = condition.check_git_workspace,
-                highlight = {colors.violet},
+                provider = 'GitBranch',
+                icon = '   ',
+                separator = ' ',
+                separator_highlight = {'NONE', colors.bg},
+                highlight = {colors.blue, colors.bg},
             },
         }
 
@@ -101,7 +110,7 @@ return {
                 provider = 'DiffAdd',
                 condition = condition.hide_in_width,
                 icon = '  ',
-                highlight = {colors.green},
+                highlight = {colors.green, colors.bg},
             },
         }
 
@@ -110,7 +119,7 @@ return {
                 provider = 'DiffModified',
                 condition = condition.hide_in_width,
                 icon = ' 柳',
-                highlight = {colors.orange},
+                highlight = {colors.orange, colors.bg},
             },
         }
 
@@ -119,7 +128,7 @@ return {
                 provider = 'DiffRemove',
                 condition = condition.hide_in_width,
                 icon = '  ',
-                highlight = {colors.red},
+                highlight = {colors.red, colors.bg},
             },
         }
 
@@ -128,8 +137,9 @@ return {
             FileIcon = {
                 provider = 'FileIcon',
                 separator = ' ',
+                separator_highlight = {'NONE', colors.bg},
                 condition = condition.buffer_not_empty,
-                highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color},
+                highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color, colors.bg},
             },
         }
 
@@ -137,8 +147,9 @@ return {
             FileName = {
                 provider = 'FileName',
                 separator = ' ',
+                separator_highlight = {'NONE', colors.bg},
                 condition = condition.buffer_not_empty,
-                highlight = {colors.magenta},
+                highlight = {colors.fg, colors.bg},
             },
         }
 
@@ -147,7 +158,7 @@ return {
             DiagnosticError = {
                 provider = 'DiagnosticError',
                 icon = '  ',
-                highlight = {colors.red},
+                highlight = {colors.red, colors.bg},
             },
         }
 
@@ -155,7 +166,7 @@ return {
             DiagnosticWarn = {
                 provider = 'DiagnosticWarn',
                 icon = '  ',
-                highlight = {colors.yellow},
+                highlight = {colors.yellow, colors.bg},
             },
         }
 
@@ -163,7 +174,7 @@ return {
             DiagnosticHint = {
                 provider = 'DiagnosticHint',
                 icon = '  ',
-                highlight = {colors.cyan},
+                highlight = {colors.cyan, colors.bg},
             },
         }
 
@@ -171,7 +182,16 @@ return {
             DiagnosticInfo = {
                 provider = 'DiagnosticInfo',
                 icon = '  ',
-                highlight = {colors.blue},
+                highlight = {colors.blue, colors.bg},
+            },
+        }
+
+        right {
+            LineInfo = {
+                provider = 'LineColumn',
+                separator = ' ',
+                separator_highlight = {'NONE', colors.bg},
+                highlight = {colors.fg, colors.bg},
             },
         }
 
@@ -180,86 +200,16 @@ return {
                 provider = 'FileEncode',
                 condition = condition.hide_in_width,
                 separator = ' ',
-                separator_highlight = {'NONE'},
-                highlight = {colors.green},
+                separator_highlight = {'NONE', colors.bg},
+                highlight = {colors.fg, colors.bg},
             },
         }
 
         right {
-            FileFormat = {
-                provider = 'FileFormat',
-                condition = condition.hide_in_width,
-                separator = ' ',
-                separator_highlight = {'NONE'},
-                highlight = {colors.green},
+            Border = {
+                provider = function() return ' ' end,
+                highlight = {'NONE', colors.bg}
             },
         }
-
-        --right {
-        --	PerCent = {
-        --		provider = 'LinePercent',
-        --		separator = ' ',
-        --		separator_highlight = {'NONE'},
-        --		highlight = {colors.fg},
-        --	}
-        --}
-
-        right {
-            LineInfo = {
-                provider = 'LineColumn',
-                separator = ' ',
-                separator_highlight = {'NONE'},
-                highlight = {colors.fg},
-            },
-        }
-
-        right {
-            FileSize = {
-                provider = 'FileSize',
-                separator = ' ',
-                condition = condition.buffer_not_empty,
-                highlight = {colors.fg},
-            },
-        }
-
-        right {
-            RainbowBlue = {
-                provider = function() return ' ▊' end,
-                highlight = {colors.blue},
-            },
-        }
-
-        -- Shortline left
-        shortline_left {
-            RainbowRed = {
-                provider = function() return '▊ ' end,
-                highlight = {colors.blue}
-            },
-        }
-
-        shortline_left {
-            BufferType = {
-                provider = 'FileTypeName',
-                separator = ' ',
-                separator_highlight = {'NONE'},
-                highlight = {colors.blue}
-            }
-        }
-
-        shortline_left {
-            SFileName = {
-                provider =  'SFileName',
-                condition = condition.buffer_not_empty,
-                highlight = {colors.fg}
-            }
-        }
-
-        -- Shortline right
-        --shortline_right {
-        --	BufferIcon = {
-        --		provider= 'BufferIcon',
-        --		highlight = {colors.fg}
-        --	}
-        --}
     end,
 }
