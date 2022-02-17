@@ -6,5 +6,3 @@ require('plugins')
 
 -- Setting
 require('setting')
-
-vim.cmd('intro')

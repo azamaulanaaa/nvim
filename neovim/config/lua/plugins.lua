@@ -59,5 +59,8 @@ return require('packer').startup(
 
         -- Cursor Assist
         plugin 'lightspeed'
+
+        -- startup
+        plugin 'startup'
     end
 )
