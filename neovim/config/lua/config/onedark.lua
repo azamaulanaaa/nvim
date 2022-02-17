@@ -3,6 +3,7 @@ return {
     config = function() 
         -- Enable cursorline
         vim.opt.cursorline = true
+        vim.g.onedark_hide_endofbuffer = 1
 
         -- If not in gui the set t_Co to 256
         if not vim.fn.has('gui_running') then vim.opt.t_Co = 256 end
@@ -15,6 +16,5 @@ return {
 
         -- Remove statusline background
         vim.cmd('highlight clear StatusLine')
-        vim.cmd('highlight EndOfBuffer guifg=#282C34')
     end,
 }
