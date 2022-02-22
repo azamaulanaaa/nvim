@@ -28,13 +28,21 @@ return {
     end,
     config = function()
         require('nvim-tree').setup {
-           auto_close = true,
-           update_focused_file = {
-               enable = true,
-           },
-           filters = {
-               dotfiles = true,
-           },
+            auto_close = true,
+            update_focused_file = {
+                enable = true,
+            },
+            filters = {
+                dotfiles = true,
+            },
+            view = {
+                relativenumber = true,
+            },
+            actions = {
+                open_file = {
+                    quit_on_open = true,
+                },
+            },
         }
 
         -- Keybinding
