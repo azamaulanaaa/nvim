@@ -21,8 +21,7 @@ return {
     config = function()
         -- Custom FZF
         function fzf()
-            local packer_fugitive = packer_plugins['vim-fugitive']
-            if packer_fugitive and packer_fugitive.loaded and vim.fn['fugitive#head']() ~= '' then
+            if vim.fn['fugitive#head']() ~= '' then
                 -- Ignore files in .gitignore
                 vim.cmd('GFiles --cached --others --exclude-standard')
                 return
@@ -34,6 +33,5 @@ return {
         
         -- Keybinding
         vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua fzf()<cr>]], { noremap = true, silent = true })	
-        vim.api.nvim_set_keymap('n', '<leader>bb', [[<cmd>Buffer<cr>]], { noremap = true, silent = true })
     end,
 }
