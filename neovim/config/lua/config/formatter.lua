@@ -8,6 +8,7 @@ return {
         'javascriptreact',
         'typescript',
         'typescriptreact',
+        'json',
     },
     config = function()
         require("formatter").setup({
@@ -82,12 +83,24 @@ return {
                         }
                     end
                 },
+                json = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = {
+                                "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+                                '--double-quote',
+                            },
+                            stdin = true,
+                        }
+                    end
+                },
             },
         })
         vim.api.nvim_exec([[
             augroup FormatAutogroup
                 autocmd!
-                autocmd BufWritePost *.rs,*.go,*.js,*.jsx,*.ts,*.tsx FormatWrite
+                autocmd BufWritePost *.rs,*.go,*.js,*.jsx,*.ts,*.tsx,*.json FormatWrite
             augroup END
         ]], true)
     end,
