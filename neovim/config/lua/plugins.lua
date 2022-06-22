@@ -17,32 +17,41 @@ return require('packer').startup(
         -- Manage it self
         use 'wbthomason/packer.nvim'
             
+        -- Visual --
+        
         -- Theme
         plugin 'onedark'
 
         -- Statusline
         plugin 'galaxyline'
 
+        -- Indent line
+        plugin 'blankline'
+
+        -- startup
+        -- plugin 'startup'
+
+        -- Feature --
+        
         -- File explorer
         plugin 'nvimtree'
 
         -- Git
         plugin 'gitsigns'
 
-        -- LSP Client
-        plugin 'lsp'
+        -- Nvim Command Suggestion
+        plugin 'wilder'
 
-        -- Syntax Highlighter
-        plugin 'treesitter'
-
-        -- Indent line
-        plugin 'blankline'
+        -- Cursor Assist
+        plugin 'lightspeed'
 
         -- File search
         plugin 'fzf'
 
-        -- Suggetion for nvim command
-        plugin 'wilder'
+        -- Coding Assist --
+        
+        -- LSP Client
+        plugin 'lsp'
 
         -- Completion
         plugin 'cmp'
@@ -50,10 +59,7 @@ return require('packer').startup(
         -- Formatter
         plugin 'formatter'
 
-        -- Cursor Assist
-        plugin 'lightspeed'
-
-        -- startup
-        plugin 'startup'
+        -- Syntax Highlighter
+        plugin 'treesitter'
     end
 )
