@@ -35,8 +35,8 @@ return {
 
         local custom = {
             providers = {
-                left_border = function () return ' ' end,
-                right_border = function () return ' ' end,
+                left_border = function () return '' end,
+                right_border = function () return '' end,
                 whitespace = function () return ' ' end,
             },
             conditions = {
@@ -52,17 +52,6 @@ return {
             },
         }
 
-        local function link_color(name, attr)
-            local raw = vim.api.nvim_get_hl_by_name(name, true)[attr]
-            if raw == nil then
-                return 'NONE'
-            end
-
-            local value = string.format('#%06x', raw)
-
-            return value
-        end
-
         -- Reset section
         gls.left                = {}
         gls.mid                 = {}
@@ -76,23 +65,23 @@ return {
         -- Disable ruler
         vim.o.ruler = false
 
-        -- Custom colors
-        -- colors.fg = link_color("StatusLine", "foreground")
-        -- colors.bg = link_color("StatusLine", "background")
-
-        -- Shortline background
-        -- vim.cmd("hi! StatusLineNC guibg=" .. colors.bg)
-        -- vim.cmd('hi! clear StatusLine')
-        -- vim.cmd('hi! clear StatusLineNC')
-
         -- Shortline list
         section.shortline.list {'NvimTree', 'packer'}
 
-        -- Left
+        -- Left Section --
+
+        -- Start Space
+        section.left {
+            StartSpace = {
+                provider = custom.providers.whitespace,
+                highlight = {'NONE', 'NONE'},
+            }
+        }
+
+        -- Open Border
         section.left {
             ViModeLeftBoder = {
                 provider = custom.providers.left_border,
-                icon = ' ',
                 highlight = {colors.bg, 'NONE'},
             }
         }
@@ -124,19 +113,25 @@ return {
                         t       = colors.red
                     }
                     vim.cmd('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
+                    
+                    -- default
                     return '   '
                 end,
                 highlight = {colors.fg, colors.bg},
-            },
+            }
         }
 
+        -- Close Border
         section.left {
             ViModeRightBorder = {
                 provider = custom.providers.right_border,
                 highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {'NONE', 'NONE'},
             }
         }
 
+        -- Open Border
         section.left {
             GitLeftBorder = {
                 condition = glc.check_git_workspace,
@@ -150,150 +145,177 @@ return {
         section.left {
             GitBranch = {
                 condition = glc.check_git_workspace,
-                provider = glp.vcs.get_git_branch,
                 icon = ' ',
+                provider = glp.vcs.get_git_branch,
                 highlight = {colors.blue, colors.bg},
                 separator = ' ',
                 separator_highlight = {colors.blue, colors.bg},
-            },
+            }
         }
-                
 
         section.left {
             DiffAdd = {
                 condition = custom.conditions.git_and_in_width,
-                provider = glp.vcs.diff_add,
                 icon = '洛',
+                provider = glp.vcs.diff_add,
                 highlight = {colors.green, colors.bg},
-            },
+            }
         }
 
         section.left {
             DiffModified = {
                 condition = custom.conditions.git_and_in_width,
-                provider = glp.vcs.diff_modified,
                 icon = ' ',
+                provider = glp.vcs.diff_modified,
                 highlight = {colors.orange, colors.bg},
-            },
+            }
         }
 
         section.left {
             DiffRemove = {
                 condition = custom.conditions.git_and_in_width,
-                provider = glp.vcs.diff_remove,
                 icon = ' ',
+                provider = glp.vcs.diff_remove,
                 highlight = {colors.red, colors.bg},
-            },
+            }
         }
 
+        -- Close Border
         section.left {
             GitRightBorder = {
                 condition = glc.check_git_workspace,
                 provider = custom.providers.right_border,
                 highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {'NONE', 'NONE'},
             }
         }
 
-        -- Midle
+        -- Middle Section --
+
+        -- Open Border
         section.mid {
             FileLeftBorder = {
-                icon =  ' ',
-                provider = custom.providers.left_border,
                 condition = custom.conditions.file_defined,
+                provider = custom.providers.left_border,
                 highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {'NONE', 'NONE'},
             }
         }
 
         section.mid {
             FileIcon = {
-                provider = glp.fileinfo.get_file_icon,
                 condition = custom.conditions.file_defined,
+                provider = glp.fileinfo.get_file_icon,
                 highlight = {glp.fileinfo.get_file_icon_color, colors.bg},
                 separator = ' ',
-                separator_highlight = {glp.fileinfo.get_file_icon_color, colors.bg},
+                separator_highlight = {colors.bg, colors.bg},
             }
         }
 
         section.mid {
             FileName = {
-                provider = glp.fileinfo.get_current_file_name,
                 condition = custom.conditions.file_defined,
+                provider = glp.fileinfo.get_current_file_name,
                 highlight = {colors.fg, colors.bg},
-            },
+            }
         }
 
+        -- Close Border
         section.mid {
             FileRightBorder = {
-                provider = custom.providers.right_border,
                 condition = custom.conditions.file_defined,
+                provider = custom.providers.right_border,
                 highlight = {colors.bg, 'NONE'},
             }
         }
 
-        -- Right
+        -- End Space
+        section.mid {
+            EndSpace = {
+                provider = custom.providers.whitespace,
+                highlight = {'NONE', 'NONE'},
+            }
+        }
+
+        -- Right Section --
+        
+        -- Start Space
+        section.right {
+            StartSpace = {
+                provider = custom.providers.whitespace,
+                highlight = {'NONE', 'NONE'},
+            }
+        }
+
+        -- Open Border
         section.right {
             DiagnosticLeftBorder = {
-                provider = custom.providers.left_border,
                 condition = custom.conditions.has_diagnostic,
+                provider = custom.providers.left_border,
                 highlight = {colors.bg, 'NONE'},
             }
         }
 
         section.right {
             DiagnosticLeftBorderSeparatorFix = {
-                provider = custom.providers.whitespace,
                 condition = custom.conditions.has_diagnostic,
+                provider = custom.providers.whitespace,
                 highlight = {'NONE', colors.bg},
             }
         }
 
         section.right {
             DiagnosticError = {
-                provider = glp.diagnostic.get_diagnostic_error,
                 condition = glc.hide_in_width,
                 icon = ' ',
+                provider = glp.diagnostic.get_diagnostic_error,
                 highlight = {colors.red, colors.bg},
-            },
-        }
-
-        section.right {
-            DiagnosticWarn = {
-                provider = glp.diagnostic.get_diagnostic_warn,
-                condition = glc.hide_in_width,
-                icon = ' ',
-                highlight = {colors.yellow, colors.bg},
-            },
-        }
-
-        section.right {
-            DiagnosticHint = {
-                provider = glp.diagnostic.get_diagnostic_hint,
-                condition = glc.hide_in_width,
-                icon = ' ',
-                highlight = {colors.cyan, colors.bg},
-            },
-        }
-
-        section.right {
-            DiagnosticInfo = {
-                provider = glp.diagnostic.get_diagnostic_info,
-                condition = glc.hide_in_width,
-                icon = ' ',
-                highlight = {colors.blue, colors.bg},
-            },
-        }
-
-        section.right {
-            DiagnosticRightBorder = {
-                provider = custom.providers.right_border,
-                condition = custom.conditions.has_diagnostic,
-                highlight = {colors.bg, 'NONE'},
             }
         }
 
         section.right {
+            DiagnosticWarn = {
+                condition = glc.hide_in_width,
+                icon = ' ',
+                provider = glp.diagnostic.get_diagnostic_warn,
+                highlight = {colors.yellow, colors.bg},
+            }
+        }
+
+        section.right {
+            DiagnosticHint = {
+                condition = glc.hide_in_width,
+                icon = ' ',
+                provider = glp.diagnostic.get_diagnostic_hint,
+                highlight = {colors.cyan, colors.bg},
+            }
+        }
+
+        section.right {
+            DiagnosticInfo = {
+                condition = glc.hide_in_width,
+                icon = ' ',
+                provider = glp.diagnostic.get_diagnostic_info,
+                highlight = {colors.blue, colors.bg},
+            }
+        }
+
+        -- Close Border
+        section.right {
+            DiagnosticRightBorder = {
+                condition = custom.conditions.has_diagnostic,
+                provider = custom.providers.right_border,
+                highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {'NONE', 'NONE'},
+            }
+        }
+
+        -- Open Border
+        section.right {
             StatLeftBorder = {
-                icon = ' ',
                 provider = custom.providers.left_border,
                 highlight = {colors.bg, 'NONE'},
             }
@@ -303,7 +325,9 @@ return {
             LineInfo = {
                 provider = glp.fileinfo.line_column,
                 highlight = {colors.fg, colors.bg},
-            },
+                separator = ' ',
+                separator_highlight = {colors.bg, colors.bg},
+            }
         }
 
         section.right {
@@ -311,14 +335,26 @@ return {
                 provider = glp.fileinfo.get_file_encode,
                 condition = glc.hide_in_width,
                 highlight = {colors.fg, colors.bg},
-            },
+            }
         }
 
+        -- Close Border
         section.right {
             StatRightBorder = {
                 provider = custom.providers.right_border,
                 highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {colors.bg, colors.bg},
             }
         }
+
+        -- End Space
+        section.right {
+            EndSpace = {
+                provider = custom.providers.whitespace,
+                highlight = {'NONE', 'NONE'},
+            }
+        }
+        
     end,
 }
