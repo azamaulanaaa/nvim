@@ -77,12 +77,12 @@ return {
         vim.o.ruler = false
 
         -- Custom colors
-        colors.fg = link_color("StatusLine", "foreground")
-        colors.bg = link_color("StatusLine", "background")
+        -- colors.fg = link_color("StatusLine", "foreground")
+        -- colors.bg = link_color("StatusLine", "background")
 
         -- Shortline background
-        --vim.cmd("hi! StatusLineNC guibg=" .. colors.bg)
-        vim.cmd('hi! clear StatusLine')
+        -- vim.cmd("hi! StatusLineNC guibg=" .. colors.bg)
+        -- vim.cmd('hi! clear StatusLine')
         -- vim.cmd('hi! clear StatusLineNC')
 
         -- Shortline list
@@ -197,6 +197,7 @@ return {
         -- Midle
         section.mid {
             FileLeftBorder = {
+                icon =  ' ',
                 provider = custom.providers.left_border,
                 condition = custom.conditions.file_defined,
                 highlight = {colors.bg, 'NONE'},
@@ -292,6 +293,7 @@ return {
 
         section.right {
             StatLeftBorder = {
+                icon = ' ',
                 provider = custom.providers.left_border,
                 highlight = {colors.bg, 'NONE'},
             }
