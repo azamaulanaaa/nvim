@@ -1,47 +1,49 @@
 return {
     'kyazdani42/nvim-tree.lua',
+    branch = 'master',
+    commit = '79258f1d670277016523e13c0a88daa25070879f',
     requires = {
-        { 'kyazdani42/nvim-web-devicons' }
+        { 
+            'kyazdani42/nvim-web-devicons',
+            brach = "main",
+            commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e",
+        },
     },
     opt = true,
     keys = { 
         { 'n', '<c-o>' },
     },
-    setup = function()
-        local config = {
-            nvim_tree_root_folder_modifier = table.concat {':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??'},
-            nvim_tree_add_trailing = 0,
-            nvim_tree_indent_markers = 1,
-            nvim_tree_git_hl = 1,
-            nvim_tree_show_icons = {
-                git = 1,
-                folders = 1,
-                files = 1
-            },
-            nvim_tree_icons = { default = '' },
-        }
-
-        for name, value in pairs(config) do
-            vim.g[name] = value
-        end
-
-    end,
     config = function()
         require('nvim-tree').setup {
-            auto_close = true,
-            update_focused_file = {
-                enable = true,
-            },
-            filters = {
-                dotfiles = true,
-            },
-            view = {
-                relativenumber = true,
-            },
             actions = {
                 open_file = {
                     quit_on_open = true,
                 },
+            },
+            filters = {
+                dotfiles = true,
+            },
+            renderer = {
+                add_trailing = false,
+                highlight_git = true,
+                icons = {
+                    glyphs = { default = '' },
+                    show = {
+                        git = true,
+                        folder = true,
+                        file = true,
+                    },
+                },
+                indent_markers = {
+                    enable = true,
+                },
+                root_folder_modifier = table.concat{':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??'},
+            },
+            update_focused_file = {
+                enable = true,
+            },
+            view = {
+                relativenumber = true,
             },
         }
 
