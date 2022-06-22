@@ -1,19 +1,21 @@
 return {
     'neovim/nvim-lspconfig',
+    tag = 'v0.1.3',
     opt = true,
     ft = { 
         'go',
         'javascript',
         'javascriptreact',
-        'rust',
         'typescript',
         'typescriptreact',
         'python',
+        'rust',
     },
     config = function()
 
         -- LSP server
         local servers = {
+            -- golang
             gopls = {
                 cmd = {'gopls'},
                 init_options = {
@@ -21,8 +23,11 @@ return {
                     completeUnimported = true,
                     },
                 }, 
+            -- javascript & typescript (includes react)
             tsserver = {}, 
+            -- python
             pyright = {},
+            -- rust
             rust_analyzer = {},
         }
 
