@@ -21,7 +21,7 @@ return {
     config = function()
         -- Custom FZF
         function fzf()
-            if vim.fn['fugitive#head']() ~= '' then
+            if vim.fn['FugitiveHead']() ~= '' then
                 -- Ignore files in .gitignore
                 vim.cmd('GFiles --cached --others --exclude-standard')
                 return
