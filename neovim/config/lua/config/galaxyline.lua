@@ -1,7 +1,13 @@
 return {
     'NTBBloodbath/galaxyline.nvim',
+    branch = "main",
+    commit = "4d4f5fc8e20a10824117e5beea7ec6e445466a8f",
     requires = { 
-        { 'kyazdani42/nvim-web-devicons' },
+        { 
+            'kyazdani42/nvim-web-devicons',
+            brach = "main",
+            commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e",
+        },
     },
     config = function()
 
