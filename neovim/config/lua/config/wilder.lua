@@ -1,5 +1,7 @@
 return {
     'gelguy/wilder.nvim',
+    branch = 'master',
+    commit = '6332b51762faaec0685769111ace06fecf673341',
     config = function()
         vim.fn['wilder#enable_cmdline_enter']()
 
