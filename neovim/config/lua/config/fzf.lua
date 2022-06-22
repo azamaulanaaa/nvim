@@ -1,13 +1,20 @@
 return {
     'junegunn/fzf.vim',
+    branch = 'master',
+    commit = 'd5f1f8641b24c0fd5b10a299824362a2a1b20ae0',
     requires = {
         { 
             'junegunn/fzf',
+            tag = '0.30.0',
             run = function()
                 vim.fn['fzf#install']()
             end,
         },
-        { 'tpope/vim-fugitive' },
+        { 
+            'tpope/vim-fugitive',
+            branch = 'master',
+            commid = '8b39d29d947618913ba1db32de605a6335875b99',
+        },
     },
     opt = true,
     keys = { 
