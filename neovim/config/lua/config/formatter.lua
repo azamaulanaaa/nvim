@@ -1,27 +1,20 @@
 return {
     'mhartington/formatter.nvim',
+    branch = 'master',
+    commit = '028cba8fab292be956344ca853e92824295ed182',
     opt = true,
     ft = {
-        'rust',
         'go',
         'javascript',
         'javascriptreact',
+        'json',
         'typescript',
         'typescriptreact',
-        'json',
+        'rust',
     },
     config = function()
         require("formatter").setup({
             filetype = {
-                rust = {
-                    function()
-                        return {
-                            exe = "rustfmt",
-                            args = {"--emit stdout"},
-                            stdin = true,
-                        }
-                    end,
-                },
                 go = {
                     function()
                         return {
@@ -57,6 +50,18 @@ return {
                         }
                     end
                 },
+                json = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = {
+                                "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+                                '--double-quote',
+                            },
+                            stdin = true,
+                        }
+                    end
+                },
                 typescript = {
                     function()
                         return {
@@ -83,17 +88,14 @@ return {
                         }
                     end
                 },
-                json = {
+                rust = {
                     function()
                         return {
-                            exe = "prettier",
-                            args = {
-                                "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                                '--double-quote',
-                            },
+                            exe = "rustfmt",
+                            args = {"--emit stdout"},
                             stdin = true,
                         }
-                    end
+                    end,
                 },
             },
         })
