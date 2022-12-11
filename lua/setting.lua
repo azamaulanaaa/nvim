@@ -26,6 +26,7 @@ function setting()
         scrolloff       = 2,
         sidescrolloff   = 5,
         wrap            = false,
+        guifont         = 'FiraCode NFM:h9',
     }
 
     for name, value in pairs(setup) do
@@ -33,7 +34,6 @@ function setting()
     end
 
     local global = {
-        instant_username = "Aza Maulana",
     }
 
     for name, value in pairs(global) do
