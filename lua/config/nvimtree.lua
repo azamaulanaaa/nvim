@@ -1,12 +1,10 @@
 return {
     'kyazdani42/nvim-tree.lua',
     branch = 'master',
-    commit = '79258f1d670277016523e13c0a88daa25070879f',
     requires = {
         { 
             'kyazdani42/nvim-web-devicons',
             brach = "main",
-            commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e",
         },
     },
     opt = true,
@@ -17,7 +15,7 @@ return {
         require('nvim-tree').setup {
             actions = {
                 open_file = {
-                    quit_on_open = true,
+                    quit_on_open = false,
                 },
             },
             filters = {
