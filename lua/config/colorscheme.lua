@@ -1,5 +1,5 @@
 return {
-    'joshdick/onedark.vim',
+    'navarasu/onedark.nvim',
     config = function() 
         -- Enable cursorline
         vim.opt.cursorline = true
@@ -12,6 +12,10 @@ return {
         if vim.fn.has('termguicolors') then vim.opt.termguicolors = true end
 
         -- Set colorscheme for nvim
-        vim.cmd('colorscheme onedark')
+        local onedark = require('onedark')
+        onedark.setup({
+            style = 'dark',
+        })
+        onedark.load()
     end,
 }
