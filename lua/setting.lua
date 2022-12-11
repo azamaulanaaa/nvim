@@ -24,7 +24,7 @@ function setting()
         backspace       = 'indent,eol,start',
         shiftround      = true,
         scrolloff       = 2,
-        sidescrolloff   = 5,
+        sidescrolloff   = 12,
         wrap            = false,
         guifont         = 'FiraCode NFM:h9',
     }
