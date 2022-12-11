@@ -1,7 +1,6 @@
 return {
     'nvim-treesitter/nvim-treesitter', 
     branch = 'master',
-    commit = '238532fe82b3dbfedcc06f11a536e19b1df696e1',
     run = ':TSUpdate',
     opt = true,
     ft = {

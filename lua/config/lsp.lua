@@ -1,6 +1,5 @@
 return {
     'neovim/nvim-lspconfig',
-    tag = 'v0.1.3',
     opt = true,
     ft = { 
         'go',
@@ -25,33 +24,33 @@ return {
                 }, 
             -- javascript & typescript (includes react)
             tsserver = {}, 
+            -- deno
+            denols = {}, 
             -- python
             pyright = {},
             -- rust
             rust_analyzer = {},
         }
 
+        local default_opts = { noremap = true, silent = true }
+
+        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, default_opts)
+        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, default_opts)
+
         -- LSP on attach
         local on_attach = function(client, bufnr)
+            vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
             -- Keybindings
-            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-            local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+            local default_opts = { noremap = true, silent = true, buffer=bufnr }
 
-            buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-            local default_opts = { noremap = true, silent = true }
-            local expr_opts = { noremap = true, expr = true }
-
-            buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', default_opts)
-            buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', default_opts)
-            buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.reference()<cr>', default_opts)
-            buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', default_opts)
-            buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', default_opts)
-            buf_set_keymap('n', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', default_opts)
-            buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>', default_opts)
-            buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>', default_opts)
-            buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', default_opts)
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, default_opts)
+            vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, default_opts)
+            vim.keymap.set('n', 'gr', vim.lsp.buf.references, default_opts)
+            vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, default_opts)
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, default_opts)
+            vim.keymap.set('n', '<c-k>', vim.lsp.buf.signature_help, default_opts)
+            vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, default_opts)
         end
 
         -- Default LSP config

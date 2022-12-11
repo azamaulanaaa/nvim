@@ -1,7 +1,6 @@
 return {
     'mhartington/formatter.nvim',
     branch = 'master',
-    commit = '028cba8fab292be956344ca853e92824295ed182',
     opt = true,
     ft = {
         'go',
