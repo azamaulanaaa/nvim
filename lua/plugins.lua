@@ -14,52 +14,26 @@ return require('packer').startup(
     function()
         function plugin(path) use(require('config.'..path)) end
 
-        -- Manage it self
+        -- Plugin Manager --
         use 'wbthomason/packer.nvim'
             
         -- Visual --
-        
-        -- Theme
         plugin 'colorscheme'
-
-        -- Statusline
-        plugin 'galaxyline'
-
-        -- Indent line
-        plugin 'blankline'
-
-        -- minimap
+        plugin 'statusline'
+        plugin 'indent_line'
         plugin 'minimap'
-
-        -- Feature --
-        
-        -- File explorer
-        plugin 'nvimtree'
-
-        -- Git
         plugin 'gitsigns'
 
-        -- Nvim Command Suggestion
-        plugin 'wilder'
-
-        -- Cursor Assist
-        plugin 'lightspeed'
-
-        -- File search
-        plugin 'telescope'
-
-        -- Coding Assist --
+        -- Feature --
+        plugin 'file_tree'
+        plugin 'cursor_asist'
+        plugin 'file_search'
         
-        -- LSP Client
+        -- Progaming Specific --
         plugin 'lsp'
-
-        -- Completion
-        plugin 'cmp'
-
-        -- Formatter
+        plugin 'autocomplete'
+        plugin 'cmd_autocomplete'
         plugin 'formatter'
-
-        -- Syntax Highlighter
-        plugin 'treesitter'
+        plugin 'highlighter'
     end
 )
