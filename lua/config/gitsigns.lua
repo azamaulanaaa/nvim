@@ -1,18 +1,17 @@
 return {
     'lewis6991/gitsigns.nvim',
-    tag = "v0.4",
     requires = {
         { 
             'nvim-lua/plenary.nvim',
             branch = 'master',
-            commit = '968a4b9afec0c633bc369662e78f8c5db0eba249',
         },
     },
     config = function() 
         require('gitsigns').setup({
             signs = {
-                add     = { text = '▍' },	
-                change	= { text = '▍' },
+                add         = { text = '▍' },	
+                change      = { text = '▍' },
+                untracked	= { text = '▍' },
             },
 
             on_attach = function(bufnr)
