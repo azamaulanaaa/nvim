@@ -20,7 +20,7 @@ return require('packer').startup(
         -- Visual --
         
         -- Theme
-        plugin 'onedark'
+        plugin 'colorscheme'
 
         -- Statusline
         plugin 'galaxyline'
@@ -28,8 +28,8 @@ return require('packer').startup(
         -- Indent line
         plugin 'blankline'
 
-        -- startup
-        -- plugin 'startup'
+        -- minimap
+        plugin 'minimap'
 
         -- Feature --
         
@@ -46,7 +46,7 @@ return require('packer').startup(
         plugin 'lightspeed'
 
         -- File search
-        plugin 'fzf'
+        plugin 'telescope'
 
         -- Coding Assist --
         
