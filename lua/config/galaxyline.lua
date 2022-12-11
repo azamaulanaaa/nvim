@@ -1,12 +1,10 @@
 return {
     'NTBBloodbath/galaxyline.nvim',
     branch = "main",
-    commit = "4d4f5fc8e20a10824117e5beea7ec6e445466a8f",
     requires = { 
         { 
             'kyazdani42/nvim-web-devicons',
             brach = "main",
-            commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e",
         },
     },
     config = function()
@@ -268,7 +266,7 @@ return {
             DiagnosticLeftBorderSeparatorFix = {
                 condition = custom.conditions.has_diagnostic,
                 provider = custom.providers.whitespace,
-                highlight = {'NONE', colors.bg},
+                highlight = {colors.bg, colors.bg},
             }
         }
 
@@ -314,8 +312,6 @@ return {
                 condition = custom.conditions.has_diagnostic,
                 provider = custom.providers.right_border,
                 highlight = {colors.bg, 'NONE'},
-                separator = ' ',
-                separator_highlight = {'NONE', 'NONE'},
             }
         }
 
@@ -324,6 +320,8 @@ return {
             StatLeftBorder = {
                 provider = custom.providers.left_border,
                 highlight = {colors.bg, 'NONE'},
+                separator = ' ',
+                separator_highlight = {'NONE', 'NONE'},
             }
         }
 
