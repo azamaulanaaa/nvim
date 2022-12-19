@@ -26,7 +26,7 @@ function setting()
         scrolloff       = 2,
         sidescrolloff   = 12,
         wrap            = false,
-        guifont         = 'FiraCode NFM:h9',
+        guifont         = 'FiraCode Nerd Font:h10',
     }
 
     for name, value in pairs(setup) do
