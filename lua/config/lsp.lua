@@ -20,6 +20,8 @@ return {
             pyright = {},
             -- rust
             rust_analyzer = {},
+            -- c/cpp
+            clangd = {},
         }
 
         local default_opts = { noremap = true, silent = true }
