@@ -35,5 +35,6 @@ return require('packer').startup(
         plugin 'cmd_autocomplete'
         plugin 'formatter'
         plugin 'highlighter'
+        plugin 'autopairs'
     end
 )
