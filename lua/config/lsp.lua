@@ -1,15 +1,5 @@
 return {
     'neovim/nvim-lspconfig',
-    opt = true,
-    ft = { 
-        'go',
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'typescriptreact',
-        'python',
-        'rust',
-    },
     config = function()
 
         -- LSP server
