@@ -18,14 +18,6 @@ return {
         -- Custom FZF
         require('telescope').setup({})
         local builtin = require('telescope.builtin')
-        local find_files = function(opt)
-            vim.fn.system('git rev-parse --is-inside-work-tree')
-            if vim.v.shell_error == 0 then
-                builtin.git_files(opt)
-            else
-                builtin.find_files(opt)
-            end
-        end
-        vim.keymap.set('n', '<leader>ff', find_files, {})
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
     end,
 }
