@@ -1,3 +1,6 @@
+-- optimizer
+require('impatient')
+
 -- Disable bloatware
 require('bloatware')
 
