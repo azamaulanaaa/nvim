@@ -7,10 +7,6 @@ return {
             brach = "main",
         },
     },
-    opt = true,
-    keys = { 
-        { 'n', '<c-o>' },
-    },
     config = function()
         require('nvim-tree').setup {
             actions = {

@@ -1,16 +1,6 @@
 return {
     'mhartington/formatter.nvim',
     branch = 'master',
-    opt = true,
-    ft = {
-        'go',
-        'javascript',
-        'javascriptreact',
-        'json',
-        'typescript',
-        'typescriptreact',
-        'rust',
-    },
     config = function()
         require("formatter").setup({
             filetype = {
