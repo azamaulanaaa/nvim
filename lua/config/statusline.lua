@@ -238,6 +238,7 @@ return {
         -- End Space
         section.mid {
             EndSpace = {
+                condition = custom.conditions.file_defined,
                 provider = custom.providers.whitespace,
                 highlight = {'NONE', 'NONE'},
             }
@@ -248,6 +249,7 @@ return {
         -- Start Space
         section.right {
             StartSpace = {
+                condition = custom.conditions.has_diagnostic,
                 provider = custom.providers.whitespace,
                 highlight = {'NONE', 'NONE'},
             }
