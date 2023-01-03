@@ -1,5 +1,5 @@
 return {
-    'NTBBloodbath/galaxyline.nvim',
+    'glepnir/galaxyline.nvim',
     branch = "main",
     requires = { 
         { 
