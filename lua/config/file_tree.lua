@@ -9,16 +9,10 @@ return {
     },
     config = function()
         require('nvim-tree').setup {
-            actions = {
-                open_file = {
-                    quit_on_open = false,
-                },
-            },
             filters = {
                 dotfiles = true,
             },
             renderer = {
-                add_trailing = false,
                 highlight_git = true,
                 icons = {
                     glyphs = { default = '' },
@@ -31,13 +25,14 @@ return {
                 indent_markers = {
                     enable = true,
                 },
-                root_folder_modifier = table.concat{':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??'},
+                root_folder_modifier = ':t:s?$?/..?',
             },
             update_focused_file = {
-                enable = true,
+                enable = false,
             },
             view = {
-                relativenumber = true,
+                relativenumber = false,
+                signcolumn = "no",
             },
         }
 
