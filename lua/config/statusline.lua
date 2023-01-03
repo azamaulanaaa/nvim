@@ -24,6 +24,7 @@ return {
             lspclient  = require('galaxyline.providers.lsp'),
         }
         local colors = require('galaxyline.themes.colors').default
+        colors.statusline_bg = '#393f4a'
 
         -- Custom function
         local section = {
@@ -195,7 +196,22 @@ return {
             }
         }
 
+        section.left {
+            SpaceLeftLeftBorder = {
+                provider = custom.providers.left_border,
+                highlight = {colors.statusline_bg, 'NONE'},
+            }
+        }
+
         -- Middle Section --
+        
+        section.mid {
+            SpaceLeftRightBorder = {
+                condition = custom.conditions.file_defined,
+                provider = custom.providers.right_border,
+                highlight = {colors.statusline_bg, 'NONE'},
+            }
+        }
 
         -- Open Border
         section.mid {
@@ -244,8 +260,23 @@ return {
             }
         }
 
+        section.mid {
+            SpaceRightLeftBorder = {
+                condition = custom.conditions.file_defined,
+                provider = custom.providers.left_border,
+                highlight = {colors.statusline_bg, 'NONE'},
+            }
+        }
+
         -- Right Section --
         
+        section.right {
+            SpaceRightRightBorder = {
+                provider = custom.providers.right_border,
+                highlight = {colors.statusline_bg, 'NONE'},
+            }
+        }
+
         -- Start Space
         section.right {
             StartSpace = {
