@@ -31,6 +31,7 @@ return require('packer').startup(
         plugin 'file_tree'
         plugin 'cursor_asist'
         plugin 'file_search'
+        plugin 'terminal'
         
         -- Progaming Specific --
         plugin 'lsp'
