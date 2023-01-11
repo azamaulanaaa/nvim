@@ -1,5 +1,5 @@
 return {
-    'glepnir/galaxyline.nvim',
+    'NTBBloodbath/galaxyline.nvim',
     branch = "main",
     requires = { 
         { 
@@ -29,7 +29,7 @@ return {
         -- Custom function
         local section = {
             left      = function (element) table.insert(gls.left, element) end,
-            mid       =  function (element) table.insert(gls.mid, element) end,
+            mid       = function (element) table.insert(gls.mid, element) end,
             right     = function (element) table.insert(gls.right, element) end,
             shortline = {
                 list  = function (list) gl.short_line_list = list end,
@@ -392,6 +392,7 @@ return {
                 highlight = {'NONE', 'NONE'},
             }
         }
+
         
     end,
 }
