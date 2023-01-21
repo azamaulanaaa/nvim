@@ -14,8 +14,6 @@ return {
                 }, 
             -- javascript & typescript (includes react)
             tsserver = {}, 
-            -- deno
-            denols = {}, 
             -- python
             pyright = {},
             -- rust
