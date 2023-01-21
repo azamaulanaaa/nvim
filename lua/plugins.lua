@@ -22,7 +22,7 @@ return require('packer').startup(
         plugin 'statusline'
         plugin 'indent_line'
         plugin 'minimap'
-        plugin 'gitsigns'
+        plugin 'cmd_autocomplete'
 
         -- Feature --
         plugin 'file_tree'
@@ -33,9 +33,9 @@ return require('packer').startup(
         -- Progaming Specific --
         plugin 'lsp'
         plugin 'autocomplete'
-        plugin 'cmd_autocomplete'
         plugin 'formatter'
         plugin 'highlighter'
         plugin 'autopairs'
+        plugin 'gitsigns'
     end
 )
