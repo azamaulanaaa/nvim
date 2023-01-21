@@ -17,9 +17,6 @@ return require('packer').startup(
         -- Plugin Manager --
         use 'wbthomason/packer.nvim'
             
-        -- Lua Optimzer --
-        use 'lewis6991/impatient.nvim'
-
         -- Visual --
         plugin 'colorscheme'
         plugin 'statusline'
