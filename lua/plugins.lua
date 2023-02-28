@@ -36,6 +36,9 @@ return require('packer').startup(
         plugin 'formatter'
         plugin 'highlighter'
         plugin 'autopairs'
+        plugin 'markdown'
+        -- plugin 'latex'
         plugin 'gitsigns'
+        plugin 'trouble'
     end
 )
