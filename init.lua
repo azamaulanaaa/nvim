@@ -1,3 +1,6 @@
+-- Optimizer
+vim.loader.enable()
+
 -- Disable bloatware
 require('bloatware')
 
