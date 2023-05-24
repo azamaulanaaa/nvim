@@ -34,6 +34,9 @@ return {
                 relativenumber = false,
                 signcolumn = "no",
             },
+            git = {
+                timeout = 5000,
+            }
         }
 
         -- Keybinding
