@@ -1,5 +1,5 @@
 return {
-    'echasnovski/mini.nvim',
+    'echasnovski/mini.map',
     require = {
         'lewis6991/gitsigns.nvim',
     },
