@@ -1,4 +1,5 @@
 local opt = vim.opt
+local g = vim.g
 
 -- file format
 opt.fileformats = "unix"
@@ -25,3 +26,6 @@ opt.sidescrolloff = 12
 
 -- clipboard
 opt.clipboard = "unnamedplus"
+
+-- keymap
+g.mapleader = "\\"
