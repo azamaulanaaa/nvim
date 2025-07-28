@@ -1,11 +1,2 @@
--- Optimizer
-vim.loader.enable()
+require("core")
 
--- Disable bloatware
-require('bloatware')
-
--- Plugins
-require('plugins')
-
--- Setting
-require('setting')
