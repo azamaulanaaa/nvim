@@ -1,4 +1,4 @@
-local M = {"williamboman/mason.nvim"}
+local M = { "mason-org/mason.nvim" }
 
 M.cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" }
 
