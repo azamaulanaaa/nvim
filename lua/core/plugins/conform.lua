@@ -1,17 +1,24 @@
-local M = {"stevearc/conform.nvim"}
+local M = { "stevearc/conform.nvim" }
 
-M.event = { "BufWritePre" }
+M.event = function(_, _events)
+	return { "BufWritePre" }
+end
 
-M.cmd = { "ConformInfo" }
+M.cmd = function(_, cmds)
+	return { "ConformInfo" }
+end
 
-M.opts = function()
-  return {
-    formatters_by_ft = {
-      lua = { "stylua" },
-      ["_"] = { "trim_whitespace" },
-    },
-    format_on_save = { timeout_ms = 3000, lsp_format = "fallback" },
-  }
+M.opts = function(_, opts)
+	opts.formatters_by_ft = opts.formatters_by_ft or {}
+
+	opts.lua = opts.lua or {}
+	opts.lua = vim.tbl_deep_extend("force", { "stylua" }, opts.lua)
+
+	opts.format_on_save = opts.format_on_save or {}
+	opts.format_on_save.timeout_ms = 3000
+	opts.format_on_save.lsp_format = "fallback"
+
+	return opts
 end
 
 return M
