@@ -15,8 +15,8 @@ end
 M.opts = function(_, opts)
   opts.formatters_by_ft = opts.formatters_by_ft or {}
 
-  opts.lua = opts.lua or {}
-  table.insert(opts.lua, "stylua")
+  opts.formatters_by_ft.lua = opts.formatters_by_ft.lua or {}
+  table.insert(opts.formatters_by_ft.lua, "stylua")
 
   opts.format_on_save = opts.format_on_save or {}
   opts.format_on_save.timeout_ms = 3000
