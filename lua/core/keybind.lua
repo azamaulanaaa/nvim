@@ -3,6 +3,10 @@ local bind = vim.keymap.set
 -- lsp
 bind("n", "<leader>ra", vim.lsp.buf.rename, { desc = "lsp rename" })
 
+-- comment
+bind("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
+bind("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
+
 -- telescope
 bind("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 bind("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
