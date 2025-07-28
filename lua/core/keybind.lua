@@ -2,6 +2,8 @@ local bind = vim.keymap.set
 
 -- lsp
 bind("n", "<leader>ra", vim.lsp.buf.rename, { desc = "lsp rename" })
+bind("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
+bind("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
 -- comment
 bind("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
