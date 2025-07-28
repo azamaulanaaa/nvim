@@ -1,11 +1,15 @@
 local M = { "stevearc/conform.nvim" }
 
-M.event = function(_, _events)
-  return { "BufWritePre" }
+M.event = function(_, events)
+  table.insert(events, "BufWritePre")
+
+  return events
 end
 
 M.cmd = function(_, cmds)
-  return { "ConformInfo" }
+  table.insert(cmds, "ConformInfo")
+
+  return cmds
 end
 
 M.opts = function(_, opts)
