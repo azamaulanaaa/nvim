@@ -22,3 +22,6 @@ opt.wrap = false
 -- gap when scroll
 opt.scrolloff = 4
 opt.sidescrolloff = 12
+
+-- clipboard
+opt.clipboard = "unnamedplus"
