@@ -29,3 +29,7 @@ bind(
 
 -- nvim tree
 bind("n", "<C-o>", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvimtree file tree" })
+
+-- buffer
+bind("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "go to previous buffer" })
+bind("n", "<leader>bn", "<cmd>bNext<cr>", { desc = "go to next buffer" })
