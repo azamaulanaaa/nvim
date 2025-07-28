@@ -7,7 +7,7 @@ local M = {
 }
 
 M.opts = function(_, opts)
-  return opts
+	return opts
 end
 
 return M

@@ -20,5 +20,9 @@ bind("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "telescope gi
 bind("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
 bind("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
 bind("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
-bind("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
-  { desc = "telescope find all files" })
+bind(
+	"n",
+	"<leader>fa",
+	"<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
+	{ desc = "telescope find all files" }
+)
