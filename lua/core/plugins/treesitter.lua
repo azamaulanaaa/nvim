@@ -14,6 +14,10 @@ M.opts = function()
       use_languagetree = true,
     },
     indent = { enable = true },
+    auto_install = true,
+    incremental_selection = {
+      enable = true,
+    },
   }
 end
 
