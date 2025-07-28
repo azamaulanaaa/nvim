@@ -18,3 +18,7 @@ opt.ruler = false
 
 -- no wrap
 opt.wrap = false
+
+-- gap when scroll
+opt.scrolloff = 4
+opt.sidescrolloff = 12
