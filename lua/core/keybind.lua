@@ -6,8 +6,8 @@ bind("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
 bind("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
 -- comment
-bind("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
-bind("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
+bind("n", "<leader>/", "gcc", { desc = "toggle comment" })
+bind("v", "<leader>/", "gc", { desc = "toggle comment" })
 
 -- fzf lua
 bind("n", "<leader>fw", "<cmd>FzfLua live_grep_native<CR>", { desc = "fuzzy live grep" })
