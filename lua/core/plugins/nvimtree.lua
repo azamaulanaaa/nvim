@@ -1,8 +1,5 @@
 local M = {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
 }
 
 M.cmd = function(_, cmds)
@@ -44,6 +41,26 @@ M.opts = function(_, opts)
 			height = window_h_int,
 		}
 	end
+
+	opts.renderer = opts.renderer or {}
+	opts.renderer.icons = opts.renderer.icons or {}
+
+	opts.renderer.icons.glyphs = opts.renderer.icons.glyphs or {}
+	opts.renderer.icons.glyphs.default = "f"
+
+	opts.renderer.icons.glyphs.folder = opts.renderer.icons.glyphs.folder or {}
+	opts.renderer.icons.glyphs.folder.default = "d"
+	opts.renderer.icons.glyphs.folder.open = "D"
+	opts.renderer.icons.glyphs.folder.empty = "d"
+	opts.renderer.icons.glyphs.folder.empty_open = "D"
+
+	opts.renderer.icons.show = opts.renderer.icons.show or {}
+	opts.renderer.icons.show.folder_arrow = false
+	opts.renderer.icons.show.git = false
+	opts.renderer.icons.show.modified = false
+	opts.renderer.icons.show.hidden = false
+	opts.renderer.icons.show.diagnostics = false
+	opts.renderer.icons.show.bookmarks = false
 
 	return opts
 end
