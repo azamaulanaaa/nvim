@@ -20,3 +20,9 @@ bind("n", "<C-o>", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvimtree file tre
 -- buffer
 bind("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "go to previous buffer" })
 bind("n", "<leader>bn", "<cmd>bNext<cr>", { desc = "go to next buffer" })
+
+-- gitsigns
+bind("n", "<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
+bind("v", "<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
+bind("n", "<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", { desc = "stage git hunk" })
+bind("v", "<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", { desc = "stage git hunk" })
