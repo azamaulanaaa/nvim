@@ -33,3 +33,6 @@ g.mapleader = "\\"
 -- disable netrw because we have nvim-tree
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+
+-- cursor line
+opt.cursorline = true
