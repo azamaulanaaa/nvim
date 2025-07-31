@@ -43,7 +43,10 @@ M.opts = function(_, opts)
 	end
 
 	opts.renderer = opts.renderer or {}
+	opts.renderer.indent_markers = opts.renderer.indent_markers or {}
 	opts.renderer.icons = opts.renderer.icons or {}
+
+	opts.renderer.indent_markers.enable = true
 
 	opts.renderer.icons.glyphs = opts.renderer.icons.glyphs or {}
 	opts.renderer.icons.glyphs.default = " "
