@@ -5,6 +5,14 @@ bind("n", "<leader>ra", vim.lsp.buf.rename, { desc = "lsp rename" })
 bind("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
 bind("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
+-- diagnostic
+bind("n", "[d", function()
+	vim.diagnostic.goto_prev({ float = { border = "single" } })
+end, { desc = "go to previous diagnostic", remap = true })
+bind("n", "]d", function()
+	vim.diagnostic.goto_next({ float = { border = "single" } })
+end, { desc = "go to next diagnostic", remap = true })
+
 -- comment
 bind("n", "<leader>/", "gcc", { desc = "toggle comment" })
 bind("v", "<leader>/", "gc", { desc = "toggle comment" })
