@@ -36,3 +36,6 @@ g.loaded_netrwPlugin = 1
 
 -- cursor line
 opt.cursorline = true
+
+-- diagnostic
+vim.diagnostic.config({ virtual_text = true })
