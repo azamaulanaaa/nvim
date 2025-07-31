@@ -49,7 +49,6 @@ M.opts = function(_, opts)
 	opts.renderer.indent_markers.enable = true
 
 	opts.renderer.icons.glyphs = opts.renderer.icons.glyphs or {}
-	opts.renderer.icons.glyphs.default = " "
 
 	opts.renderer.icons.glyphs.folder = opts.renderer.icons.glyphs.folder or {}
 	opts.renderer.icons.glyphs.folder.default = "+"
@@ -59,6 +58,7 @@ M.opts = function(_, opts)
 
 	opts.renderer.icons.show = opts.renderer.icons.show or {}
 	opts.renderer.icons.show.folder_arrow = false
+	opts.renderer.icons.show.file = false
 	opts.renderer.icons.show.git = false
 	opts.renderer.icons.show.modified = false
 	opts.renderer.icons.show.hidden = false
