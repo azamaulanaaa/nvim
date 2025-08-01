@@ -27,6 +27,7 @@ M.opts = function(_, opts)
   end
 
   opts.view = opts.view or {}
+  opts.view.signcolumn = "no"
   opts.view.width = function()
     return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
   end
