@@ -17,7 +17,6 @@ M.opts = function(_, opts)
 
   opts.keymap = opts.keymap or {}
   opts.keymap.preset = "none"
-
   opts.keymap["<CR>"] = { "accept", "fallback" }
   opts.keymap["<Tab>"] = { "select_next" }
   opts.keymap["<S-Tab>"] = { "select_prev" }
