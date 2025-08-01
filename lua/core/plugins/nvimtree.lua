@@ -51,13 +51,11 @@ M.opts = function(_, opts)
   opts.renderer.icons.glyphs = opts.renderer.icons.glyphs or {}
 
   opts.renderer.icons.glyphs.folder = opts.renderer.icons.glyphs.folder or {}
-  opts.renderer.icons.glyphs.folder.default = "+"
-  opts.renderer.icons.glyphs.folder.open = "-"
-  opts.renderer.icons.glyphs.folder.empty = "+"
-  opts.renderer.icons.glyphs.folder.empty_open = "-"
+  opts.renderer.icons.glyphs.folder.arrow_closed = "+"
+  opts.renderer.icons.glyphs.folder.arrow_open = "-"
 
   opts.renderer.icons.show = opts.renderer.icons.show or {}
-  opts.renderer.icons.show.folder_arrow = false
+  opts.renderer.icons.show.folder = false
   opts.renderer.icons.show.file = false
   opts.renderer.icons.show.git = false
   opts.renderer.icons.show.modified = false
