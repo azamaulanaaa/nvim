@@ -43,10 +43,7 @@ M.opts = function(_, opts)
   end
 
   opts.renderer = opts.renderer or {}
-  opts.renderer.indent_markers = opts.renderer.indent_markers or {}
   opts.renderer.icons = opts.renderer.icons or {}
-
-  opts.renderer.indent_markers.enable = true
 
   opts.renderer.icons.glyphs = opts.renderer.icons.glyphs or {}
 
@@ -62,6 +59,9 @@ M.opts = function(_, opts)
   opts.renderer.icons.show.hidden = false
   opts.renderer.icons.show.diagnostics = false
   opts.renderer.icons.show.bookmarks = false
+
+  opts.renderer.indent_markers = opts.renderer.indent_markers or {}
+  opts.renderer.indent_markers.enable = true
 
   return opts
 end
