@@ -10,6 +10,9 @@ M.opts = function(_, opts)
   opts.defaults.git_icons = false
   opts.defaults.file_icons = false
 
+  opts.defaults.winopts = opts.defaults.winopts or {}
+  opts.defaults.winopts.border = "single"
+
   return opts
 end
 
