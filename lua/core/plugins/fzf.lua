@@ -2,6 +2,12 @@ local M = {
   "ibhagwan/fzf-lua",
 }
 
+M.cmd = function(_, cmd)
+  table.insert(cmd, "FzfLua")
+
+  return cmd
+end
+
 M.opts = function(_, opts)
   opts[0] = opts[0] or {}
   table.insert(opts[0], "default")
