@@ -1,14 +1,16 @@
 local M = {
-	"ibhagwan/fzf-lua",
+  "ibhagwan/fzf-lua",
 }
 
 M.opts = function(_, opts)
-	opts = {
-		{ "border-fused" },
-		defaults = { git_icons = false, file_icons = false },
-	}
+  opts[0] = opts[0] or {}
+  table.insert(opts[0], "border-fused")
 
-	return opts
+  opts.defaults = opts.defaults or {}
+  opts.defaults.git_icons = false
+  opts.defaults.file_icons = false
+
+  return opts
 end
 
 return M
