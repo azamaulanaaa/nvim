@@ -7,10 +7,10 @@ bind("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
 -- diagnostic
 bind("n", "[d", function()
-  vim.diagnostic.goto_prev({ float = { border = "single" } })
+  vim.diagnostic.goto_prev({ float = { border = "solid" } })
 end, { desc = "go to previous diagnostic" })
 bind("n", "]d", function()
-  vim.diagnostic.goto_next({ float = { border = "single" } })
+  vim.diagnostic.goto_next({ float = { border = "solid" } })
 end, { desc = "go to next diagnostic" })
 
 -- comment
