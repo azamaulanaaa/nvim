@@ -1,9 +1,6 @@
 local M = {
   "saghen/blink.cmp",
   version = "1.*",
-  dependencies = {
-    { "windwp/nvim-autopairs", config = true },
-  },
 }
 
 M.opts = function(_, opts)
