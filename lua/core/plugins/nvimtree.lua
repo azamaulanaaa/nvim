@@ -16,6 +16,16 @@ M.opts = function(_, opts)
   opts.hijack_cursor = true
   opts.sync_root_with_cwd = true
 
+  opts.on_attach = function(bufnr)
+    local api = require("nvim-tree.api")
+    local bind = vim.keymap.set
+
+    api.config.mappings.default_on_attach(bufnr)
+
+    bind("n", "<esc>", api.tree.close, { desc = "close", buffer = bufnr })
+    bind("n", "q", api.tree.close, { desc = "close", buffer = bufnr })
+  end
+
   opts.view = opts.view or {}
   opts.view.width = function()
     return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
