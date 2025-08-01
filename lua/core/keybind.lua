@@ -14,8 +14,8 @@ bind("n", "]d", function()
 end, { desc = "go to next diagnostic" })
 
 -- comment
-bind("n", "<leader>/", "gcc", { desc = "toggle comment" })
-bind("v", "<leader>/", "gc", { desc = "toggle comment" })
+bind("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
+bind("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
 -- fzf lua
 bind("n", "<leader>fw", "<cmd>FzfLua live_grep_native<CR>", { desc = "fuzzy live grep" })
