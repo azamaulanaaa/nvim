@@ -7,11 +7,11 @@ bind("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
 -- diagnostic
 bind("n", "[d", function()
-	vim.diagnostic.goto_prev({ float = { border = "single" } })
-end, { desc = "go to previous diagnostic", remap = true })
+  vim.diagnostic.goto_prev({ float = { border = "single" } })
+end, { desc = "go to previous diagnostic" })
 bind("n", "]d", function()
-	vim.diagnostic.goto_next({ float = { border = "single" } })
-end, { desc = "go to next diagnostic", remap = true })
+  vim.diagnostic.goto_next({ float = { border = "single" } })
+end, { desc = "go to next diagnostic" })
 
 -- comment
 bind("n", "<leader>/", "gcc", { desc = "toggle comment" })
