@@ -1,23 +1,23 @@
 local M = { "stevearc/conform.nvim" }
 
 M.event = function(_, events)
-  table.insert(events, "BufWritePre")
+	table.insert(events, "BufWritePre")
 
-  return events
+	return events
 end
 
 M.cmd = function(_, cmds)
-  table.insert(cmds, "ConformInfo")
+	table.insert(cmds, "ConformInfo")
 
-  return cmds
+	return cmds
 end
 
 M.opts = function(_, opts)
-  opts.format_on_save = opts.format_on_save or {}
-  opts.format_on_save.timeout_ms = 3000
-  opts.format_on_save.lsp_format = "fallback"
+	opts.format_on_save = opts.format_on_save or {}
+	opts.format_on_save.timeout_ms = 3000
+	opts.format_on_save.lsp_format = "fallback"
 
-  return opts
+	return opts
 end
 
 return M
