@@ -13,8 +13,6 @@ M.cmd = function(_, cmds)
 end
 
 M.opts = function(_, opts)
-  opts.formatters_by_ft = opts.formatters_by_ft or {}
-
   opts.format_on_save = opts.format_on_save or {}
   opts.format_on_save.timeout_ms = 3000
   opts.format_on_save.lsp_format = "fallback"
