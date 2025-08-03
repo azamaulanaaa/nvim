@@ -26,8 +26,6 @@ bind("n", "<leader>fh", "<cmd>FzfLua helptags<cr>", { desc = "fuzzy find help ta
 bind("n", "<C-o>", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvimtree file tree" })
 
 -- buffer
-bind("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "go to previous buffer" })
-bind("n", "<leader>bn", "<cmd>bNext<cr>", { desc = "go to next buffer" })
 
 -- gitsigns
 bind("n", "<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
