@@ -20,7 +20,7 @@ bind("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 -- fzf lua
 bind("n", "<leader>fw", "<cmd>FzfLua live_grep_native<CR>", { desc = "fuzzy live grep" })
 bind("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "fuzzy find files" })
-bind("n", "<leader>fh", "<cmd>FzfLua helptags<cr>", { desc = "fuzzy find files" })
+bind("n", "<leader>fh", "<cmd>FzfLua helptags<cr>", { desc = "fuzzy find help tags" })
 
 -- nvim tree
 bind("n", "<C-o>", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvimtree file tree" })
