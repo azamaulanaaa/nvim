@@ -31,6 +31,18 @@ M.opts = function(_, opts)
   opts.keymap["<Tab>"] = { "select_next" }
   opts.keymap["<S-Tab>"] = { "select_prev" }
 
+  opts.sources = opts.sources or {}
+
+  opts.sources.providers = opts.sources.providers or {}
+  opts.sources.providers.lazydev = {
+    name = "lazydev",
+    module = "lazydev.integrations.blink",
+    score_offset = 100,
+  }
+
+  opts.sources.per_filetype = opts.sources.per_filetype or {}
+  opts.sources.per_filetype.lua = { inherit_defaults = true, 'lazydev' }
+
   return opts
 end
 
