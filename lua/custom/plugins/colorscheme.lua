@@ -25,8 +25,8 @@ end
 M.config = function(_, opts)
   require("nightfox").setup(opts)
 
-  vim.opt.background = "dark"
   vim.cmd.colorscheme("carbonfox")
+  vim.opt.background = "dark"
 end
 
 return M
