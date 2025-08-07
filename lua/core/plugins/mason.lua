@@ -8,15 +8,18 @@ M.event = function(_, events)
 end
 
 M.cmd = function(_, cmds)
-	table.insert(cmds, "Mason")
-	table.insert(cmds, "MasonInstall")
-	table.insert(cmds, "MasonUpdate")
+  table.insert(cmds, "Mason")
+  table.insert(cmds, "MasonInstall")
+  table.insert(cmds, "MasonUpdate")
 
-	return cmds
+  return cmds
 end
 
 M.opts = function(_, opts)
-	return opts
+  opts.ui = opts.ui or {}
+  opts.ui.border = "single"
+
+  return opts
 end
 
 return M
