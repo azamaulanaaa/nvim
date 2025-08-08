@@ -77,11 +77,4 @@ M.opts = function(_, opts)
   return opts
 end
 
-M.config = function(_, opts)
-  require("nvim-tree").setup(opts)
-
-  -- NOTE: fix file icon color
-  vim.cmd.highlight({ "link", "NvimTreeFileIcon", "NONE" })
-end
-
 return M
