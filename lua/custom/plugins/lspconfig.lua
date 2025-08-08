@@ -7,6 +7,8 @@ M.opts = function(_, opts)
 	vim.lsp.enable("rust_analyzer")
 	-- javascript, typescript, javascriptreact, typescriptreact
 	vim.lsp.enable("denols")
+	-- json
+	vim.lsp.enable("jsonls")
 
 	return opts
 end
