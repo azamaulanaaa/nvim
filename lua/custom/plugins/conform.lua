@@ -9,6 +9,8 @@ M.opts = function(_, opts)
 	opts.formatters_by_ft.javascriptreact = { "deno_fmt" }
 	opts.formatters_by_ft.typescriptreact = { "deno_fmt" }
 	opts.formatters_by_ft.json = { "prettier" }
+	opts.formatters_by_ft.markdown = { "prettier" }
+	opts.formatters_by_ft.toml = { "taplo" }
 
 	return opts
 end
