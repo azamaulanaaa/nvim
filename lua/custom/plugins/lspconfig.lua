@@ -9,6 +9,8 @@ M.opts = function(_, opts)
 	vim.lsp.enable("denols")
 	-- json
 	vim.lsp.enable("jsonls")
+	-- toml
+	vim.lsp.enable("taplo")
 
 	return opts
 end
