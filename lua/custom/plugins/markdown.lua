@@ -1,4 +1,7 @@
-local M = { "MeanderingProgrammer/render-markdown.nvim" }
+local M = {
+	"MeanderingProgrammer/render-markdown.nvim",
+	ft = "markdown",
+}
 
 M.opts = function(_, opts)
 	opts.completions = opts.completions or {}
