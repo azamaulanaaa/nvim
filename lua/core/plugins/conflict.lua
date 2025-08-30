@@ -1,12 +1,12 @@
 local M = {
-  "akinsho/git-conflict.nvim",
-  version = "*",
+	"akinsho/git-conflict.nvim",
+	version = "*",
 }
 
 M.opts = function(_, opts)
-  opts.default_mappings = false
+	opts.default_mappings = false
 
-  return opts
+	return opts
 end
 
 return M

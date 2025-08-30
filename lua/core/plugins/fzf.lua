@@ -1,28 +1,28 @@
 local M = {
-  "ibhagwan/fzf-lua",
+	"ibhagwan/fzf-lua",
 }
 
 M.cmd = function(_, cmd)
-  table.insert(cmd, "FzfLua")
+	table.insert(cmd, "FzfLua")
 
-  return cmd
+	return cmd
 end
 
 M.opts = function(_, opts)
-  opts[0] = opts[0] or {}
-  table.insert(opts[0], "default")
+	opts[0] = opts[0] or {}
+	table.insert(opts[0], "default")
 
-  opts.defaults = opts.defaults or {}
-  opts.defaults.git_icons = false
-  opts.defaults.file_icons = false
+	opts.defaults = opts.defaults or {}
+	opts.defaults.git_icons = false
+	opts.defaults.file_icons = false
 
-  opts.defaults.winopts = opts.defaults.winopts or {}
-  opts.defaults.winopts.border = "single"
+	opts.defaults.winopts = opts.defaults.winopts or {}
+	opts.defaults.winopts.border = "single"
 
-  opts.defaults.winopts.preview = opts.defaults.winopts.preview or {}
-  opts.defaults.winopts.preview.border = "single"
+	opts.defaults.winopts.preview = opts.defaults.winopts.preview or {}
+	opts.defaults.winopts.preview.border = "single"
 
-  return opts
+	return opts
 end
 
 return M

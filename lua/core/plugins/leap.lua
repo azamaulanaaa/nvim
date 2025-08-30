@@ -6,10 +6,10 @@ local M = {
 }
 
 M.event = function(_, events)
-  table.insert(events, "BufReadPost")
-  table.insert(events, "BufNewFile")
+	table.insert(events, "BufReadPost")
+	table.insert(events, "BufNewFile")
 
-  return events
+	return events
 end
 
 M.config = function(_, configs)

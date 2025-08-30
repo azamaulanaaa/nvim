@@ -1,25 +1,25 @@
 local M = { "mason-org/mason.nvim" }
 
 M.event = function(_, events)
-  table.insert(events, "BufReadPost")
-  table.insert(events, "BufNewFile")
+	table.insert(events, "BufReadPost")
+	table.insert(events, "BufNewFile")
 
-  return events
+	return events
 end
 
 M.cmd = function(_, cmds)
-  table.insert(cmds, "Mason")
-  table.insert(cmds, "MasonInstall")
-  table.insert(cmds, "MasonUpdate")
+	table.insert(cmds, "Mason")
+	table.insert(cmds, "MasonInstall")
+	table.insert(cmds, "MasonUpdate")
 
-  return cmds
+	return cmds
 end
 
 M.opts = function(_, opts)
-  opts.ui = opts.ui or {}
-  opts.ui.border = "single"
+	opts.ui = opts.ui or {}
+	opts.ui.border = "single"
 
-  return opts
+	return opts
 end
 
 return M
