@@ -13,6 +13,7 @@ M.opts = function(_, opts)
 	opts.formatters_by_ft.css = { "deno_fmt" }
 	opts.formatters_by_ft.html = { "deno_fmt" }
 	opts.formatters_by_ft.toml = { "taplo" }
+	opts.formatters_by_ft.yaml = { "deno_fmt" }
 
 	return opts
 end
