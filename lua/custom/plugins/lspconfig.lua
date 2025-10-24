@@ -11,6 +11,9 @@ M.opts = function(_, opts)
 	vim.lsp.enable("jsonls")
 	-- toml
 	vim.lsp.enable("taplo")
+	-- python
+	vim.lsp.enable("pyright")
+	-- vim.lsp.enable("pyrefly")
 
 	return opts
 end
