@@ -3,7 +3,7 @@ local M = {
 }
 
 M.cmd = function(_, cmds)
-	table.insert(cmds, "NvimTreeToggle")
+	table.insert(cmds, "NvimTreeFindFileToggle")
 
 	return cmds
 end

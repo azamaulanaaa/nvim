@@ -24,7 +24,7 @@ bind("n", "<leader>fh", "<cmd>FzfLua helptags<cr>", { desc = "fuzzy find help ta
 bind("n", "<leader>fb", "<cmd>FzfLua blines<cr>", { desc = "fuzzy find lines in current buffer" })
 
 -- nvim tree
-bind("n", "<C-o>", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvimtree file tree" })
+bind("n", "<C-o>", "<cmd>NvimTreeFindFileToggle<cr>", { desc = "open nvimtree file tree" })
 
 -- buffer
 bind("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "close current buffer" })
