@@ -42,3 +42,7 @@ bind("n", "<leader>co", "<Plug>(git-conflict-ours)", { desc = "git conflict choo
 bind("n", "<leader>ct", "<Plug>(git-conflict-theirs)", { desc = "git conflict choose theirs" })
 bind("n", "[c", "<Plug>(git-conflict-prev-conflict)", { desc = "go to previous git conflict" })
 bind("n", "]c", "<Plug>(git-conflict-prev-conflict)", { desc = "go to next git conflict" })
+
+-- leap
+bind({ "n", "x", "o" }, "s", "<Plug>(leap)")
+bind("n", "S", "<Plug>(leap-from-window)")

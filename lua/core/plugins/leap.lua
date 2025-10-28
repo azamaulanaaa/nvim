@@ -13,7 +13,7 @@ M.event = function(_, events)
 end
 
 M.config = function(_, configs)
-	require("leap").add_default_mappings()
+	-- require("leap").add_default_mappings()
 end
 
 return M
