@@ -31,9 +31,9 @@ bind("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "close current buffer" })
 
 -- gitsigns
 bind("n", "<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
-bind("v", "<leader>hr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
+bind("x", "<leader>hr", ":Gitsigns reset_hunk<cr>", { desc = "reset git hunk" })
 bind("n", "<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", { desc = "stage git hunk" })
-bind("v", "<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", { desc = "stage git hunk" })
+bind("x", "<leader>hs", ":Gitsigns stage_hunk<cr>", { desc = "stage git hunk" })
 bind("n", "[h", "<cmd>Gitsigns prev_hunk<cr>", { desc = "go to previous git hunk" })
 bind("n", "]h", "<cmd>Gitsigns next_hunk<cr>", { desc = "go to next git hunk" })
 
