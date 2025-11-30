@@ -40,6 +40,7 @@ bind("n", "]h", "<cmd>Gitsigns next_hunk<cr>", { desc = "go to next git hunk" })
 -- git conflict
 bind("n", "<leader>co", "<Plug>(git-conflict-ours)", { desc = "git conflict choose ours" })
 bind("n", "<leader>ct", "<Plug>(git-conflict-theirs)", { desc = "git conflict choose theirs" })
+bind("n", "<leader>cb", "<Plug>(git-conflict-both)", { desc = "git conflict choose both" })
 bind("n", "[c", "<Plug>(git-conflict-prev-conflict)", { desc = "go to previous git conflict" })
 bind("n", "]c", "<Plug>(git-conflict-prev-conflict)", { desc = "go to next git conflict" })
 
