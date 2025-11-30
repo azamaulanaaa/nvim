@@ -14,6 +14,8 @@ M.opts = function(_, opts)
 	-- python
 	vim.lsp.enable("pyright")
 	-- vim.lsp.enable("pyrefly")
+	-- protobuf
+	vim.lsp.enable("buf_ls")
 
 	return opts
 end
