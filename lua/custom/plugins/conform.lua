@@ -15,6 +15,7 @@ M.opts = function(_, opts)
 	opts.formatters_by_ft.toml = { "taplo" }
 	opts.formatters_by_ft.python = { "ruff_format" }
 	opts.formatters_by_ft.yaml = { "deno_fmt" }
+	opts.formatters_by_ft.proto = { "buf" }
 
 	return opts
 end
