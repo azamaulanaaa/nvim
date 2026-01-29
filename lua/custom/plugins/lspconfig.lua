@@ -12,7 +12,7 @@ M.opts = function(_, opts)
 	-- toml
 	vim.lsp.enable("taplo")
 	-- python
-	vim.lsp.enable("pyright")
+	vim.lsp.enable("basedpyright")
 	-- vim.lsp.enable("pyrefly")
 	-- protobuf
 	vim.lsp.enable("buf_ls")
