@@ -17,11 +17,11 @@ end, { desc = "go to next diagnostic" })
 bind("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 bind("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
--- fzf lua
-bind("n", "<leader>fw", "<cmd>FzfLua live_grep_native<CR>", { desc = "fuzzy live grep" })
-bind("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "fuzzy find files" })
-bind("n", "<leader>fh", "<cmd>FzfLua helptags<cr>", { desc = "fuzzy find help tags" })
-bind("n", "<leader>fb", "<cmd>FzfLua blines<cr>", { desc = "fuzzy find lines in current buffer" })
+-- fff
+bind("n", "<leader>fw", "<cmd>Fff live_grep<CR>", { desc = "fuzzy live grep" })
+bind("n", "<leader>ff", "<cmd>Fff files<cr>", { desc = "fuzzy find files" })
+-- bind("n", "<leader>fh", "<cmd>Fff helptags<cr>", { desc = "fuzzy find help tags" })
+-- bind("n", "<leader>fb", "<cmd>Fff blines<cr>", { desc = "fuzzy find lines in current buffer" })
 
 -- nvim tree
 bind("n", "<C-o>", "<cmd>NvimTreeFindFileToggle<cr>", { desc = "open nvimtree file tree" })
