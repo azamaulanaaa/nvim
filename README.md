@@ -7,7 +7,6 @@ A minimalist Neovim configuration designed for simplicity and high compatibility
 - **[folke/lazy.nvim](https://github.com/folke/lazy.nvim)**: A modern plugin manager for Neovim.
 - **[saghen/blink.cmp](https://github.com/saghen/blink.cmp)**: Enhanced UI and sources (path, buffer, etc.) for Neovim's autocompletion.
 - **[stevearc/confirm.nvim](https://github.com/stevearc/confirm.nvim)**: A simple utility for creating confirmation popups.
-- **[ibhagwan/fzf-lua](https://github.com/ibhagwan/fzf-lua)**: A fuzzy search tool for files, lines, help tags, and more.
 - **[lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git tooling and indicators for managing hunks.
 - **[lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**: Increases readability by adding indentation guides.
 - **[folke/lazydev.nvim](https://github.com/folke/lazydev.nvim)**: Provides type definitions and completion for Neovim's Lua API.
@@ -19,6 +18,8 @@ A minimalist Neovim configuration designed for simplicity and high compatibility
 - **[nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)**: A feature-rich file explorer.
 - **[nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: A powerful framework for syntax highlighting, indentation, and more.
 - **[folke/which-key.nvim](https://github.com/folke/which-key.nvim)**: A popup that displays available keybindings.
+- **[dmtrKovalenko/fff](https://github.com/dmtrKovalenko/fff)**: A fuzzy search
+  tool for files.
 
 # file structure
 
