@@ -39,11 +39,6 @@ M.init = function()
 end
 
 -- Update your keys to use the new subcommand syntax
-M.keys = {
-	{ "<leader>ff", "<cmd>Fff files<cr>", desc = "Find Files" },
-	{ "<leader>fw", "<cmd>Fff live_grep<cr>", desc = "Live Grep" },
-	{ "<leader>fb", "<cmd>Fff blines<cr>", desc = "Grep Current File" },
-}
 M.opts = {
 	layout = {
 		prompt = "> ",
