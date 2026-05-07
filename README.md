@@ -6,7 +6,7 @@ A minimalist Neovim configuration designed for simplicity and high compatibility
 
 - **[folke/lazy.nvim](https://github.com/folke/lazy.nvim)**: A modern plugin manager for Neovim.
 - **[saghen/blink.cmp](https://github.com/saghen/blink.cmp)**: Enhanced UI and sources (path, buffer, etc.) for Neovim's autocompletion.
-- **[stevearc/confirm.nvim](https://github.com/stevearc/confirm.nvim)**: A simple utility for creating confirmation popups.
+- **[stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)**: Make your codes beatuful.
 - **[lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git tooling and indicators for managing hunks.
 - **[lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**: Increases readability by adding indentation guides.
 - **[folke/lazydev.nvim](https://github.com/folke/lazydev.nvim)**: Provides type definitions and completion for Neovim's Lua API.
