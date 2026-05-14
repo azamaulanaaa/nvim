@@ -1,6 +1,7 @@
 local M = {
 	"lewis6991/gitsigns.nvim",
 	version = "*",
+	event = { "BufReadPost", "BufNewFile" },
 }
 
 M.event = function(_, events)
