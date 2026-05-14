@@ -39,3 +39,8 @@ opt.cursorline = true
 
 -- diagnostic
 vim.diagnostic.config({ virtual_text = true })
+
+-- lua bytecode mode
+if vim.loader then
+	vim.loader.enable()
+end
