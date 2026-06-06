@@ -2,23 +2,8 @@ local M = {
 	"nvim-treesitter/nvim-treesitter",
   branch = "main",
 	build = ":TSUpdate",
+  lazy = false,
 }
-
-M.event = function(_, events)
-	table.insert(events, "BufReadPost")
-	table.insert(events, "BufNewFile")
-
-	return events
-end
-
-M.cmd = function(_, cmds)
-	table.insert(cmds, "TSInstall")
-	table.insert(cmds, "TSBufEnable")
-	table.insert(cmds, "TSBufDisable")
-	table.insert(cmds, "TSModuleInfo")
-
-	return cmds
-end
 
 M.opts = function(_, opts)
 	opts.ensure_installed = { "lua", "vim", "vimdoc" }
