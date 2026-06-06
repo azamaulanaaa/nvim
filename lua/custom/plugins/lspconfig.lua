@@ -16,6 +16,9 @@ M.opts = function(_, opts)
 	vim.lsp.enable("pyrefly")
 	-- protobuf
 	vim.lsp.enable("buf_ls")
+	-- composefile and docker
+	vim.lsp.enable("docker_compose_language_service")
+	vim.lsp.enable("docker_language_server")
 
 	return opts
 end
