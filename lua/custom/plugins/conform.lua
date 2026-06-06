@@ -8,6 +8,7 @@ M.opts = function(_, opts)
 	opts.formatters_by_ft.toml = { "taplo" }
 	opts.formatters_by_ft.python = { "ruff_format" }
 	opts.formatters_by_ft.proto = { "buf" }
+	opts.formatters_by_ft.dockerfile = { "dockerfmt" }
 
 	local web_fallback = { "deno_fmt", "prettierd", "prettier", stop_after_first = true }
 	opts.formatters_by_ft.javascript = web_fallback
