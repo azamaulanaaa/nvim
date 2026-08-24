@@ -4,13 +4,6 @@ local M = {
 	event = { "BufReadPost", "BufNewFile" },
 }
 
-M.event = function(_, events)
-	table.insert(events, "BufReadPost")
-	table.insert(events, "BufNewFile")
-
-	return events
-end
-
 M.opts = function(_, opts)
 	opts.current_line_blame = true
 
