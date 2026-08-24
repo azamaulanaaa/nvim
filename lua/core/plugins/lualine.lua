@@ -28,7 +28,7 @@ M.opts = function(_, opts)
 		{
 			"branch",
 			fmt = function(branch)
-				if (not branch == nil) or branch == "" then
+				if branch == nil or branch == "" then
 					return nil
 				end
 
