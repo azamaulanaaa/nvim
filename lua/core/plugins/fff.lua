@@ -40,8 +40,8 @@ end
 
 -- Update your keys to use the new subcommand syntax
 M.opts = {
+	prompt = "> ",
 	layout = {
-		prompt = "> ",
 		prompt_position = "top",
 		flex = {
 			wrap = "bottom",
