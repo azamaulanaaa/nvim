@@ -19,6 +19,8 @@ M.opts = function(_, opts)
 	-- composefile and docker
 	vim.lsp.enable("docker_compose_language_service")
 	vim.lsp.enable("docker_language_server")
+	-- tailwindcss
+	vim.lsp.enable("tailwindcss")
 
 	return opts
 end
